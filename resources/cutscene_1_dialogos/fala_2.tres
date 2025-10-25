@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="DialogoResource" load_steps=3 format=3 uid="uid://ed8rblc5ao36"]
+
+[ext_resource type="LabelSettings" uid="uid://7aopcerj0dbw" path="res://resources/dialogo_label_settings.tres" id="1_15o3v"]
+[ext_resource type="Script" uid="uid://cqodi24y1tx8h" path="res://scripts/DialogoResource.gd" id="3_tqvr3"]
+
+[resource]
+script = ExtResource("3_tqvr3")
+nome = "Voz anônima: "
+dialogo = "Você se esqueceu…"
+dialogo_label_settings = ExtResource("1_15o3v")
+metadata/_custom_type_script = "uid://cqodi24y1tx8h"

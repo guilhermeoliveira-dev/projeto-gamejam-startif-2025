@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bj8hkgt5imyjn"
+path="res://.godot/imported/Cena 2.ogg-42df27cdaa3cc4a2e04418fd9edf06fe.oggvorbisstr"
+
+[deps]
+
+source_file="res://sons/Cena 2.ogg"
+dest_files=["res://.godot/imported/Cena 2.ogg-42df27cdaa3cc4a2e04418fd9edf06fe.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

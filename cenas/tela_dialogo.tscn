@@ -1,0 +1,129 @@
+[gd_scene load_steps=8 format=3 uid="uid://bf1xup0u3qsqi"]
+
+[ext_resource type="Script" uid="uid://cos6skbqh6uy0" path="res://scripts/tela_dialogo.gd" id="1_s3wwq"]
+[ext_resource type="Texture2D" uid="uid://bleehh0xjlgsr" path="res://sprites/retratos/retrato_padrao.png" id="2_sbl2q"]
+[ext_resource type="LabelSettings" uid="uid://dvqqpypdtpyiv" path="res://resources/titulo_label_settings.tres" id="3_sbl2q"]
+[ext_resource type="LabelSettings" uid="uid://7aopcerj0dbw" path="res://resources/dialogo_label_settings.tres" id="4_du7e7"]
+[ext_resource type="Texture2D" uid="uid://ct3eyn70sjs2q" path="res://sprites/icone_dialogo.png" id="5_du7e7"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qhqgl"]
+bg_color = Color(0, 0, 0, 0.8235294)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yt2gt"]
+bg_color = Color(1, 1, 1, 0)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[node name="Dialogo" type="CanvasLayer"]
+layer = 2
+follow_viewport_scale = 4.0
+script = ExtResource("1_s3wwq")
+retrato_padrao = ExtResource("2_sbl2q")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MargemExterna" type="MarginContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -324.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="Panel" type="PanelContainer" parent="Control/MargemExterna"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_qhqgl")
+
+[node name="MargemInterna" type="MarginContainer" parent="Control/MargemExterna/Panel"]
+layout_mode = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/MargemExterna/Panel/MargemInterna"]
+layout_mode = 2
+
+[node name="Borda" type="PanelContainer" parent="Control/MargemExterna/Panel/MargemInterna/HBoxContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_yt2gt")
+
+[node name="RetratoDialogo" type="TextureRect" parent="Control/MargemExterna/Panel/MargemInterna/HBoxContainer/Borda"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(256, 256)
+layout_mode = 2
+expand_mode = 3
+stretch_mode = 4
+
+[node name="MargemTexto" type="MarginContainer" parent="Control/MargemExterna/Panel/MargemInterna/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/MargemExterna/Panel/MargemInterna/HBoxContainer/MargemTexto"]
+layout_mode = 2
+
+[node name="Nome" type="Label" parent="Control/MargemExterna/Panel/MargemInterna/HBoxContainer/MargemTexto/VBoxContainer"]
+unique_name_in_owner = true
+clip_contents = true
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_vertical = 1
+text = "???:???:???:???:???:???:???:???:???:???:???:???:???:???:???:???:???:???:???:???:???:???:???:???:???:???:???:???:???:"
+label_settings = ExtResource("3_sbl2q")
+autowrap_mode = 2
+
+[node name="Dialogo" type="Label" parent="Control/MargemExterna/Panel/MargemInterna/HBoxContainer/MargemTexto/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_vertical = 3
+text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ultricies enim vel posuere eleifend. Phasellus molestie, orci ac lacinia imperdiet, nisi nulla molestie diam, at efficitur elit felis vitae erat. In id leo a felis placerat viverra sollicitudin ac dolor. Maecenas odio lectus, cursus non porta vel, dignissim non purus. Nunc tincidunt venenatis purus ut posuere. Nulla at lacus semper, ullamcorper ipsum sed, vestibulum neque. Morbi vitae orci consectetur nisi pharetra bibendum vitae ut leo. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean bibendum viverra metus, ut dictum velit rhoncus vel. Duis porta ultricies felis sit amet lacinia. Duis et commodo eros. Vivamus in ultricies quam.
+
+Phasellus blandit ultrices tellus. Phasellus in convallis urna. Sed in turpis nulla. Maecenas vitae lacus id massa tincidunt malesuada. Etiam ut sem sem. Integer euismod odio id lectus eleifend tincidunt. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut lacinia mauris, eu varius eros. Nam vel elementum erat. Nullam eu aliquet tortor, a sagittis risus. Maecenas sodales, velit eget sollicitudin convallis, tortor mauris hendrerit purus, at blandit metus elit eget orci. Suspendisse ac orci quis ante maximus dignissim in id urna. Vivamus aliquet pretium sodales. Nulla justo velit, ullamcorper ac ultricies et, tincidunt id ligula. Phasellus in finibus nunc.
+
+Duis in dui ac purus posuere tempor ut at nisi. Ut in metus ante. Ut vitae risus tempus, tempor nunc quis, placerat quam. Vestibulum tellus dolor, pharetra sed placerat nec, venenatis at justo. Proin magna quam, gravida eget vehicula vel, aliquam et odio. Donec pellentesque vitae odio ut elementum. Aliquam lobortis pulvinar ipsum sit amet gravida. Cras id ipsum massa.
+
+Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam vehicula ligula nisl, quis congue velit consectetur sit amet. Aliquam mattis, eros eget vulputate viverra, tellus erat rhoncus nibh, ut varius nulla nunc et turpis. Nulla facilisi. Donec non congue orci, id venenatis ligula. Aliquam eleifend posuere nibh, quis euismod est finibus ut. Nunc eget orci sodales, vehicula mi et, pharetra libero. Donec ultricies, ex quis rhoncus pretium, ante tellus accumsan ex, ac facilisis felis nulla eget augue. Nam a justo aliquet, porttitor ligula congue, efficitur mi. Morbi lectus ex, semper eu eros id, aliquet venenatis diam. Nam et ornare neque. Vivamus placerat viverra efficitur.
+
+Sed eu commodo nulla, ac dignissim tellus. Quisque vel viverra ex. Praesent pharetra enim eros, at mollis purus mattis in. Aliquam nec dolor sit amet justo convallis vestibulum ut eleifend velit. In hendrerit sed neque eu tincidunt. Maecenas fermentum iaculis mauris ac placerat. Donec ut tortor vel nisl molestie egestas. Nam ligula urna, lobortis vitae est non, imperdiet faucibus turpis. Aenean eget turpis facilisis purus porttitor bibendum ut aliquet neque. In ultricies volutpat ante, et blandit eros tempor aliquam. Vestibulum sit amet suscipit magna.
+
+Integer cursus vulputate vehicula. Vivamus et ipsum at nisl facilisis varius id non est. Praesent tincidunt facilisis vulputate. Nullam eget imperdiet massa. Donec id eleifend mi. Integer eu nunc erat. Phasellus eget mi ac eros viverra mollis. Sed. "
+label_settings = ExtResource("4_du7e7")
+autowrap_mode = 2
+clip_text = true
+
+[node name="IconeContinuarDialogo" type="TextureButton" parent="Control/MargemExterna/Panel/MargemInterna/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+texture_normal = ExtResource("5_du7e7")
+texture_pressed = ExtResource("5_du7e7")
+texture_hover = ExtResource("5_du7e7")
+texture_disabled = ExtResource("5_du7e7")
+texture_focused = ExtResource("5_du7e7")

@@ -16,6 +16,9 @@ func _physics_process(delta):
 		direcao -= 1
 
 	velocity.x = direcao * velocidade
+	
+	if not is_on_floor():
+		velocity.y = 30
 
 	if Input.is_action_just_pressed("ui_up") and not pulando:
 		pulando = true

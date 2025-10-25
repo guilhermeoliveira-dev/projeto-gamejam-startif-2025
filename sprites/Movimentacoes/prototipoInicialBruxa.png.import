@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://is06d73f6n01"
-path="res://.godot/imported/retrato_player_placeholder.png-ef8203ed3809c1837aedc2c92d2ebcbf.ctex"
+uid="uid://b3jntihblom4o"
+path="res://.godot/imported/prototipoInicialBruxa.png-a1e61432ee91fa4d2dca0102c5313180.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/retrato_player_placeholder.png"
-dest_files=["res://.godot/imported/retrato_player_placeholder.png-ef8203ed3809c1837aedc2c92d2ebcbf.ctex"]
+source_file="res://sprites/Movimentacoes/prototipoInicialBruxa.png"
+dest_files=["res://.godot/imported/prototipoInicialBruxa.png-a1e61432ee91fa4d2dca0102c5313180.ctex"]
 
 [params]
 

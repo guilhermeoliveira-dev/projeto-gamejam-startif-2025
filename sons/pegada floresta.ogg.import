@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://fnaercx36i6j"
+path="res://.godot/imported/pegada floresta.ogg-692ca0879a096f65d05429b80e04325b.oggvorbisstr"
+
+[deps]
+
+source_file="res://sons/pegada floresta.ogg"
+dest_files=["res://.godot/imported/pegada floresta.ogg-692ca0879a096f65d05429b80e04325b.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
