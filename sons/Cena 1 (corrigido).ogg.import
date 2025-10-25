@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://6n7vi0u8qfdp"
+path="res://.godot/imported/Cena 1 (corrigido).ogg-b670055556f52594b02bfba6eba90598.oggvorbisstr"
+
+[deps]
+
+source_file="res://sons/Cena 1 (corrigido).ogg"
+dest_files=["res://.godot/imported/Cena 1 (corrigido).ogg-b670055556f52594b02bfba6eba90598.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

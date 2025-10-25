@@ -1,12 +1,148 @@
-[gd_scene load_steps=3 format=3 uid="uid://bxjnks2j3uc0v"]
+[gd_scene load_steps=12 format=3 uid="uid://bxjnks2j3uc0v"]
 
 [ext_resource type="PackedScene" uid="uid://p253om0x3iy3" path="res://cenas/efeito_circulo_magico.tscn" id="1_3rn4x"]
 [ext_resource type="PackedScene" uid="uid://qyrqju2tajw1" path="res://cenas/player.tscn" id="1_h2cyb"]
+[ext_resource type="Texture2D" uid="uid://dopoxsroujnrl" path="res://sprites/bg-ceu.png" id="1_k8w4s"]
+[ext_resource type="Texture2D" uid="uid://cmho3ekspi2sf" path="res://sprites/bg-predios.png" id="2_v7536"]
+[ext_resource type="Script" uid="uid://dexkb411viqc7" path="res://scripts/teste.gd" id="4_8tb1v"]
+[ext_resource type="Texture2D" uid="uid://is06d73f6n01" path="res://sprites/retrato_player_placeholder.png" id="6_udxje"]
+[ext_resource type="AudioStream" uid="uid://6n7vi0u8qfdp" path="res://sons/Cena 1 (corrigido).ogg" id="7_qhqgl"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qhqgl"]
+bg_color = Color(0, 0, 0, 0.8235294)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yt2gt"]
+bg_color = Color(1, 1, 1, 0)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="LabelSettings" id="LabelSettings_k8itr"]
+font_size = 30
+
+[sub_resource type="LabelSettings" id="LabelSettings_s6ras"]
+font_size = 20
 
 [node name="fase" type="Node2D"]
 
-[node name="Efeito Circulo Magico" parent="." instance=ExtResource("1_3rn4x")]
-position = Vector2(134, 76)
+[node name="ParallaxBG" type="CanvasLayer" parent="."]
+layer = -1
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBG"]
+scale = Vector2(4, 4)
+texture = ExtResource("1_k8w4s")
+centered = false
+
+[node name="Ceu" type="Parallax2D" parent="ParallaxBG"]
+repeat_size = Vector2(1280, 0)
+
+[node name="Predios" type="Parallax2D" parent="ParallaxBG"]
+scroll_scale = Vector2(1.2, 1.2)
+repeat_size = Vector2(1280, 0)
+repeat_times = 5
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBG/Predios"]
+scale = Vector2(4, 4)
+texture = ExtResource("2_v7536")
+centered = false
 
 [node name="Player" parent="." instance=ExtResource("1_h2cyb")]
-position = Vector2(136, 89)
+z_index = 2
+y_sort_enabled = true
+position = Vector2(136, 88)
+script = ExtResource("4_8tb1v")
+
+[node name="Efeito Circulo Magico" parent="Player" instance=ExtResource("1_3rn4x")]
+position = Vector2(-2, -12)
+
+[node name="Dialogo" type="CanvasLayer" parent="."]
+layer = 2
+follow_viewport_scale = 4.0
+
+[node name="Control" type="Control" parent="Dialogo"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MargemExterna" type="MarginContainer" parent="Dialogo/Control"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -324.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="Panel" type="PanelContainer" parent="Dialogo/Control/MargemExterna"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_qhqgl")
+
+[node name="MargemInterna" type="MarginContainer" parent="Dialogo/Control/MargemExterna/Panel"]
+layout_mode = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Dialogo/Control/MargemExterna/Panel/MargemInterna"]
+layout_mode = 2
+
+[node name="Borda" type="PanelContainer" parent="Dialogo/Control/MargemExterna/Panel/MargemInterna/HBoxContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_yt2gt")
+
+[node name="RetratoDialogo" type="TextureRect" parent="Dialogo/Control/MargemExterna/Panel/MargemInterna/HBoxContainer/Borda"]
+layout_mode = 2
+texture = ExtResource("6_udxje")
+expand_mode = 3
+stretch_mode = 4
+
+[node name="MargemTexto" type="MarginContainer" parent="Dialogo/Control/MargemExterna/Panel/MargemInterna/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Dialogo/Control/MargemExterna/Panel/MargemInterna/HBoxContainer/MargemTexto"]
+layout_mode = 2
+
+[node name="Nome" type="Label" parent="Dialogo/Control/MargemExterna/Panel/MargemInterna/HBoxContainer/MargemTexto/VBoxContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "Gatinha:"
+label_settings = SubResource("LabelSettings_k8itr")
+autowrap_mode = 2
+
+[node name="Dialogo" type="Label" parent="Dialogo/Control/MargemExterna/Panel/MargemInterna/HBoxContainer/MargemTexto/VBoxContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_vertical = 0
+text = "Miau Miau Miau Miau Miau MiauMiau Miau Miau Miau Miau MiauMiau Miau Miau Miau Miau MiauMiau Miau Miau Miau Miau MiauMiau Miau Miau Miau Miau MiauMiau Miau Miau Miau Miau MiauMiau Miau Miau Miau Miau MiauMiau Miau Miau Miau Miau Miau"
+label_settings = SubResource("LabelSettings_s6ras")
+autowrap_mode = 2
+
+[node name="Musica" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_qhqgl")
+volume_db = -30.0
+autoplay = true
+playback_type = 1
