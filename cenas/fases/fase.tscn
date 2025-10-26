@@ -1,7 +1,7 @@
 [gd_scene load_steps=77 format=4 uid="uid://bxjnks2j3uc0v"]
 
 [ext_resource type="Script" uid="uid://defv2mwc16id4" path="res://scripts/fase_1.gd" id="1_8ts1l"]
-[ext_resource type="Texture2D" uid="uid://dopoxsroujnrl" path="res://sprites/bg-ceu.png" id="2_75m84"]
+[ext_resource type="Texture2D" uid="uid://dopoxsroujnrl" path="res://sprites/backgrounds/bg-ceu.png" id="2_75m84"]
 [ext_resource type="Texture2D" uid="uid://dw6xa3ek8rcqp" path="res://sprites/chuva/chuva_animacao01.png" id="3_af1nv"]
 [ext_resource type="Texture2D" uid="uid://dechy52vc2212" path="res://sprites/chuva/chuva_animacao02.png" id="4_xj4ea"]
 [ext_resource type="Texture2D" uid="uid://ds8naw6t5i81s" path="res://sprites/chuva/chuva_animacao03.png" id="5_1drkx"]
@@ -64,10 +64,10 @@
 [ext_resource type="Texture2D" uid="uid://byi4v0btpqdsy" path="res://sprites/chuva/chuva_animacao60.png" id="62_bsdd1"]
 [ext_resource type="Texture2D" uid="uid://1uro512d37" path="res://sprites/chuva/chuva_animacao61.png" id="63_vcd2l"]
 [ext_resource type="Texture2D" uid="uid://bxixgte6iu7p" path="res://sprites/chuva/chuva_animacao62.png" id="64_lis0d"]
-[ext_resource type="Texture2D" uid="uid://cmho3ekspi2sf" path="res://sprites/bg-predios.png" id="65_ejc35"]
+[ext_resource type="Texture2D" uid="uid://cmho3ekspi2sf" path="res://sprites/backgrounds/bg-predios.png" id="65_ejc35"]
 [ext_resource type="AudioStream" uid="uid://6n7vi0u8qfdp" path="res://sons/Cena 1 (corrigido).ogg" id="66_7y2yi"]
 [ext_resource type="Texture2D" uid="uid://bn5x4mq1snboq" path="res://sprites/Cena urbana/tileset_urbano.png" id="67_bbmx4"]
-[ext_resource type="PackedScene" uid="uid://p253om0x3iy3" path="res://cenas/efeito_circulo_magico.tscn" id="68_8eiga"]
+[ext_resource type="PackedScene" uid="uid://6nyvc8yd3wyt" path="res://cenas/caveira.tscn" id="69_75m84"]
 [ext_resource type="PackedScene" uid="uid://qyrqju2tajw1" path="res://cenas/player.tscn" id="69_xnj0b"]
 [ext_resource type="Script" uid="uid://dhho6g2jqum2h" path="res://scripts/ui.gd" id="70_tmj7i"]
 [ext_resource type="LabelSettings" uid="uid://dvqqpypdtpyiv" path="res://resources/titulo_label_settings.tres" id="71_75m84"]
@@ -286,19 +286,19 @@ texture_region_size = Vector2i(32, 32)
 2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -1.9756584, 16, -1.9756584, 16, 16, -16, 16)
 3:1/0 = 0
 3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -1.9756584, 16, -1.9756584, 16, 16, -16, 16)
-0:2/0 = 0
-0:3/0 = 0
-1:3/0 = 0
-1:2/0 = 0
-2:2/0 = 0
-2:3/0 = 0
-3:3/0 = 0
-3:2/0 = 0
-4:2/0 = 0
 4:1/0 = 0
-5:2/0 = 0
-6:2/0 = 0
-7:2/0 = 0
+4:4/0 = 0
+4:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(12, -16, 16, -16, 16, 16, -5.333333, 16, -5.333333, -5.333333)
+5:3/0 = 0
+5:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, 10.666668, 16, 10.666668, 16, 16, -16, 16)
+4:3/0 = 0
+4:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(12, 12, 16, 10.666668, 16, 16, 12, 16)
+5:4/0 = 0
+5:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+6:4/0 = 0
+6:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 0, -16, 0, -10.666666, 16, -10.666666, 16, 16, -16, 16)
+6:3/0 = 0
+6:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, 10.666668, 0, 10.666668, 0, 16, -16, 16)
 
 [sub_resource type="TileSet" id="TileSet_7apt5"]
 tile_size = Vector2i(32, 32)
@@ -326,6 +326,10 @@ corner_radius_bottom_left = 5
 
 [node name="fase" type="Node2D"]
 script = ExtResource("1_8ts1l")
+
+[node name="Musica" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("66_7y2yi")
+playback_type = 1
 
 [node name="ParallaxBG" type="CanvasLayer" parent="."]
 layer = -1
@@ -358,25 +362,27 @@ scale = Vector2(4, 4)
 texture = ExtResource("65_ejc35")
 centered = false
 
-[node name="Musica" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("66_7y2yi")
-playback_type = 1
-
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
-tile_map_data = PackedByteArray("AAADAAQAAAACAAEAAAAEAAQAAAABAAEAAAAHAAQAAAABAAEAAAAIAAQAAAABAAEAAAAJAAQAAAABAAEAAAACAAQAAAABAAEAAAABAAQAAAABAAEAAAAAAAQAAAABAAEAAAD//wQAAAABAAEAAAD+/wQAAAABAAEAAAD9/wQAAAABAAEAAAAGAAQAAAABAAEAAAAFAAQAAAABAAEAAAA=")
+tile_map_data = PackedByteArray("AAADAAQAAAACAAEAAAAEAAQAAAABAAEAAAAHAAQAAAAAAAEAAAAIAAQAAAABAAEAAAAJAAQAAAABAAEAAAACAAQAAAABAAEAAAABAAQAAAABAAEAAAAAAAQAAAABAAEAAAD//wQAAAABAAEAAAD+/wQAAAABAAEAAAD9/wQAAAABAAEAAAAGAAQAAAABAAEAAAAFAAQAAAABAAEAAAAKAAQAAAAAAAEAAAALAAQAAAAAAAEAAAAMAAQAAAAAAAEAAAANAAQAAAACAAEAAAAOAAQAAAADAAEAAAAPAAQAAAADAAEAAAAQAAQAAAADAAEAAAARAAQAAAADAAEAAAASAAQAAAADAAEAAAATAAQAAAADAAEAAAAUAAQAAAADAAEAAAA=")
+tile_set = SubResource("TileSet_7apt5")
+
+[node name="Objetos" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AAAGAAQAAAAEAAEAAAAFAAMAAAAEAAEAAAAFAAIAAAAEAAAAAAAGAAMAAAAEAAAAAAAIAAMAAAAEAAMAAAAIAAQAAAAEAAQAAAAJAAMAAAAFAAMAAAAJAAQAAAAFAAQAAAAKAAMAAAAGAAMAAAAKAAQAAAAGAAQAAAASAAMAAAAEAAMAAAASAAQAAAAEAAQAAAATAAMAAAAFAAMAAAATAAQAAAAFAAQAAAAUAAMAAAAGAAMAAAAUAAQAAAAGAAQAAAD//wMAAAAEAAMAABD+/wMAAAAFAAMAABD9/wMAAAAGAAMAABD//wQAAAAEAAQAABD+/wQAAAAFAAQAABD9/wQAAAAGAAQAABA=")
 tile_set = SubResource("TileSet_7apt5")
 
 [node name="ItensPorCima" type="TileMapLayer" parent="."]
-tile_map_data = PackedByteArray("AAADAAQAAAACAAEAAAAEAAQAAAABAAEAAAAFAAQAAAABAAEAAAAGAAQAAAAEAAEAAAAHAAQAAAABAAEAAAAIAAQAAAABAAEAAAAJAAQAAAABAAEAAAACAAQAAAABAAEAAAABAAQAAAABAAEAAAAAAAQAAAABAAEAAAD//wQAAAABAAEAAAD+/wQAAAABAAEAAAD9/wQAAAABAAEAAAAFAAMAAAAEAAEAAAAFAAIAAAAEAAAAAAAGAAMAAAAEAAAAAAA=")
+tile_map_data = PackedByteArray("AAAGAAQAAAAEAAEAAAAFAAMAAAAEAAEAAAAFAAIAAAAEAAAAAAAGAAMAAAAEAAAAAAA=")
 tile_set = SubResource("TileSet_7apt5")
-
-[node name="Efeito Circulo Magico" parent="." instance=ExtResource("68_8eiga")]
-position = Vector2(-46, 123)
 
 [node name="Player" parent="." instance=ExtResource("69_xnj0b")]
 position = Vector2(120, 60)
 
 [node name="Projeteis" type="Node2D" parent="."]
+
+[node name="Inimigos" type="Node2D" parent="."]
+
+[node name="Inimigo" parent="Inimigos" instance=ExtResource("69_75m84")]
+position = Vector2(505, 103)
 
 [node name="UI" type="CanvasLayer" parent="."]
 script = ExtResource("70_tmj7i")

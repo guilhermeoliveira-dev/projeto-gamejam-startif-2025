@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cmho3ekspi2sf"
-path="res://.godot/imported/bg-predios.png-5319ccca5638e97537758baad28bb2ff.ctex"
+uid="uid://dopoxsroujnrl"
+path="res://.godot/imported/bg-ceu.png-a2c423d27d0ac84d6a318ff6f88b96c1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/bg-predios.png"
-dest_files=["res://.godot/imported/bg-predios.png-5319ccca5638e97537758baad28bb2ff.ctex"]
+source_file="res://sprites/backgrounds/bg-ceu.png"
+dest_files=["res://.godot/imported/bg-ceu.png-a2c423d27d0ac84d6a318ff6f88b96c1.ctex"]
 
 [params]
 

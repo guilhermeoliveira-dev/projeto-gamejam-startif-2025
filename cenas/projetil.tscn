@@ -2,20 +2,17 @@
 
 [ext_resource type="Script" uid="uid://d2jnai1ndj4ce" path="res://scripts/projetil.gd" id="1_j4buw"]
 [ext_resource type="SpriteFrames" uid="uid://cwtjdguyd4pc2" path="res://sprites/projetil/projetil_player.tres" id="2_j4buw"]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_wjayw"]
-radius = 6.9
+[ext_resource type="Resource" uid="uid://xc115sc6cvie" path="res://resources/projeteis/projetil_do_player.tres" id="2_wjayw"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_j4buw"]
 radius = 12.0
 
 [node name="Projetil" type="CharacterBody2D" groups=["projetil"]]
 script = ExtResource("1_j4buw")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_wjayw")
+tipo_projetil = ExtResource("2_wjayw")
 
 [node name="HurtBox" type="Area2D" parent="." groups=["projetil"]]
+unique_name_in_owner = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
 shape = SubResource("CircleShape2D_j4buw")
@@ -25,4 +22,4 @@ unique_name_in_owner = true
 position = Vector2(-21, 0)
 sprite_frames = ExtResource("2_j4buw")
 autoplay = "default"
-frame_progress = 0.8602689
+frame_progress = 0.6301181

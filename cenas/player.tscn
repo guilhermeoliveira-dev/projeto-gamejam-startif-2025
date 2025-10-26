@@ -57,8 +57,11 @@ animations = [{
 
 [node name="Player" type="CharacterBody2D" groups=["player", "recebe_dano"]]
 script = ExtResource("1_unwft")
+velocidade = 150.0
+altura_pulo = 300.0
 projetil_cena = ExtResource("2_xojfc")
 tipo_projetil = ExtResource("3_15dsx")
+invincibilidade_tempo = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_onrkg")
@@ -76,4 +79,8 @@ zoom = Vector2(4, 4)
 [node name="CooldownProjetil" type="Timer" parent="."]
 unique_name_in_owner = true
 process_callback = 0
+one_shot = true
+
+[node name="Invincibilidade" type="Timer" parent="."]
+unique_name_in_owner = true
 one_shot = true

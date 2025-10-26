@@ -24,6 +24,12 @@ GameState="*res://scripts/GameState.gd"
 window/size/viewport_width=1280
 window/size/viewport_height=720
 
+[global_group]
+
+recebe_dano=""
+inimigo=""
+player=""
+
 [input]
 
 mover_direita={

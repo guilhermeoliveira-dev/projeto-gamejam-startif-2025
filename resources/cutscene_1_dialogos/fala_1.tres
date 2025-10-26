@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="DialogoResource" load_steps=4 format=3 uid="uid://cmvb2pgnpagsv"]
 
 [ext_resource type="LabelSettings" uid="uid://7aopcerj0dbw" path="res://resources/dialogo_label_settings.tres" id="1_6od3g"]
-[ext_resource type="Script" uid="uid://cqodi24y1tx8h" path="res://scripts/DialogoResource.gd" id="1_11j6d"]
+[ext_resource type="Script" uid="uid://cqodi24y1tx8h" path="res://scripts/resources_custom/DialogoResource.gd" id="1_11j6d"]
 [ext_resource type="Texture2D" uid="uid://is06d73f6n01" path="res://sprites/retratos/retrato_player_placeholder.png" id="2_ibry2"]
 
 [resource]

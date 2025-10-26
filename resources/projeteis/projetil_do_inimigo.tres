@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="TipoProjetil" load_steps=3 format=3 uid="uid://cbv6miq5emymd"]
 
 [ext_resource type="SpriteFrames" uid="uid://c2pd83nlowke5" path="res://sprites/projetil/projetil_inimigo.tres" id="1_p0bwo"]
-[ext_resource type="Script" uid="uid://iv1avjqj6qlp" path="res://scripts/TipoProjetil.gd" id="2_oj7hn"]
+[ext_resource type="Script" uid="uid://iv1avjqj6qlp" path="res://scripts/resources_custom/TipoProjetil.gd" id="2_p0bwo"]
 
 [resource]
-script = ExtResource("2_oj7hn")
+script = ExtResource("2_p0bwo")
 ANIMACAO = ExtResource("1_p0bwo")
 metadata/_custom_type_script = "uid://iv1avjqj6qlp"

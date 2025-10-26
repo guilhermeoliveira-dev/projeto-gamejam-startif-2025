@@ -5,7 +5,6 @@ class_name Player
 @export_group("fisica")
 @export var velocidade: float = 250.0
 @export var altura_pulo: float = 400.0
-@export var gravidade: float = 200.0
 
 @export_group("gameplay")
 signal recebeu_dano(vida_atual: float)
@@ -19,19 +18,26 @@ signal player_morreu()
 			player_morreu.emit()
 		
 
-
-
 @export var projetil_cena: PackedScene
 @export var tipo_projetil: TipoProjetil
+
 @export var cooldown_projetil: float = 3:
 	set(valor):
 		cooldown_projetil = valor
-		cooldown_projetil_timer.wait_time = valor
-@onready var cooldown_projetil_timer: Timer = %CooldownProjetil
-@onready var projeteis_holder: Node2D = get_tree().current_scene.find_child("Projeteis")
+		if cooldown_projetil_timer != null: cooldown_projetil_timer.wait_time = valor
 
+@onready var cooldown_projetil_timer: Timer = %CooldownProjetil
+
+@export var invincibilidade_tempo: float = 1.5:
+	set(valor):
+		invincibilidade_tempo = valor
+		if invincibilidade_timer != null: invincibilidade_timer.wait_time = valor
+@onready var invincibilidade_timer: Timer = %Invincibilidade
 
 @onready var sprites: AnimatedSprite2D = %Sprite
+
+
+@onready var projeteis_holder: Node2D = get_tree().current_scene.find_child("Projeteis")
 
 
 var ultima_direcao: float = 1
@@ -92,7 +98,11 @@ func rodar_animacao(animacao: String):
 
 func receber_dano(dano: float):
 	
+	if not invincibilidade_timer.is_stopped():
+		return
+	
 	vida -= dano
+	invincibilidade_timer.start()
 	#recebeu_dano.emit(vida)
 
 func invocar_projetil():
@@ -101,10 +111,12 @@ func invocar_projetil():
 		var projetil_instancia: ProjetilNode = projetil_cena.instantiate()
 		
 		projeteis_holder.add_child(projetil_instancia)
+		#projetil_instancia._ready()
 		
 		projetil_instancia.tipo_projetil = tipo_projetil
 		projetil_instancia.direcao = Vector2(ultima_direcao, 0)
-		projetil_instancia.position = position + Vector2(10, 0) * ultima_direcao
+		projetil_instancia.position = position + Vector2(30, 0) * ultima_direcao
+		projetil_instancia.grupo_faccao = "player"
 		
 		cooldown_projetil_timer.start()
 	
