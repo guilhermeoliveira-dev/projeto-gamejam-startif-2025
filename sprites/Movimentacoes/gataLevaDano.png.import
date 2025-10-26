@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://wg5ewsc818gw"
-path="res://.godot/imported/lixo_virado_abrindo-sheet.png-400a0d0b62bfd2ab92027e46c4080622.ctex"
+uid="uid://cr5j1286sl2sa"
+path="res://.godot/imported/gataLevaDano.png-e951f3c5fb0173e4ae8156a91bad1538.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/Cena urbana/lixeiras/lixos/lixo_virado_abrindo-sheet.png"
-dest_files=["res://.godot/imported/lixo_virado_abrindo-sheet.png-400a0d0b62bfd2ab92027e46c4080622.ctex"]
+source_file="res://sprites/Movimentacoes/gataLevaDano.png"
+dest_files=["res://.godot/imported/gataLevaDano.png-e951f3c5fb0173e4ae8156a91bad1538.ctex"]
 
 [params]
 

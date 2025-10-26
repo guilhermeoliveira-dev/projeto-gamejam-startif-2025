@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://wg5ewsc818gw"
-path="res://.godot/imported/lixo_virado_abrindo-sheet.png-400a0d0b62bfd2ab92027e46c4080622.ctex"
+uid="uid://o1vg6e8jpkpp"
+path="res://.godot/imported/tileset_urbano_novo.png-3699824318e5fd96a02e3b8087369d49.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/Cena urbana/lixeiras/lixos/lixo_virado_abrindo-sheet.png"
-dest_files=["res://.godot/imported/lixo_virado_abrindo-sheet.png-400a0d0b62bfd2ab92027e46c4080622.ctex"]
+source_file="res://sprites/Cena urbana/tileset_urbano_novo.png"
+dest_files=["res://.godot/imported/tileset_urbano_novo.png-3699824318e5fd96a02e3b8087369d49.ctex"]
 
 [params]
 

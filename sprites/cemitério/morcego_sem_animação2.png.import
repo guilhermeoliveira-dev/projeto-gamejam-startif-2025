@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://wg5ewsc818gw"
-path="res://.godot/imported/lixo_virado_abrindo-sheet.png-400a0d0b62bfd2ab92027e46c4080622.ctex"
+uid="uid://dsowhjvlxndy5"
+path="res://.godot/imported/morcego_sem_animação2.png-ccd28c2ec0441d9701e6330158def200.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/Cena urbana/lixeiras/lixos/lixo_virado_abrindo-sheet.png"
-dest_files=["res://.godot/imported/lixo_virado_abrindo-sheet.png-400a0d0b62bfd2ab92027e46c4080622.ctex"]
+source_file="res://sprites/cemitério/morcego_sem_animação2.png"
+dest_files=["res://.godot/imported/morcego_sem_animação2.png-ccd28c2ec0441d9701e6330158def200.ctex"]
 
 [params]
 

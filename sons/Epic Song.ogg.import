@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cex41i5q7q06b"
+path="res://.godot/imported/Epic Song.ogg-64c918190a14f481d3e9206a99469246.oggvorbisstr"
+
+[deps]
+
+source_file="res://sons/Epic Song.ogg"
+dest_files=["res://.godot/imported/Epic Song.ogg-64c918190a14f481d3e9206a99469246.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
