@@ -1,13 +1,6 @@
-[gd_scene load_steps=92 format=4 uid="uid://b50eh6d4qd7pp"]
+[gd_scene load_steps=80 format=4 uid="uid://b50eh6d4qd7pp"]
 
-[ext_resource type="Script" uid="uid://dvu38ktibmbc3" path="res://scripts/cutscene_1.gd" id="1_gy2yx"]
-[ext_resource type="AudioStream" uid="uid://dwovj0f7idwgi" path="res://sons/Sussurros.ogg" id="2_7ilwf"]
-[ext_resource type="AudioStream" uid="uid://bcmpafpky4u0b" path="res://sons/Sussurros se esqueceu.ogg" id="3_puf8r"]
-[ext_resource type="AudioStream" uid="uid://dbhtfyi1hsggf" path="res://sons/Sussurros volte.ogg" id="4_f7r3v"]
-[ext_resource type="Resource" uid="uid://cmvb2pgnpagsv" path="res://resources/cutscene_1_dialogos/fala_1.tres" id="5_0qp8d"]
-[ext_resource type="Resource" uid="uid://ed8rblc5ao36" path="res://resources/cutscene_1_dialogos/fala_2.tres" id="6_fdlp2"]
-[ext_resource type="Resource" uid="uid://d4at3bqkiraqq" path="res://resources/cutscene_1_dialogos/fala_3.tres" id="7_tlx2x"]
-[ext_resource type="Resource" uid="uid://iubp1d8h020b" path="res://resources/cutscene_1_dialogos/fala_4.tres" id="8_yi8kx"]
+[ext_resource type="Script" uid="uid://bny0l1wwic20c" path="res://scripts/cutscene_2.gd" id="1_uhmfs"]
 [ext_resource type="Texture2D" uid="uid://dopoxsroujnrl" path="res://sprites/backgrounds/bg-ceu.png" id="9_8p3ux"]
 [ext_resource type="Texture2D" uid="uid://dw6xa3ek8rcqp" path="res://sprites/chuva/chuva_animacao01.png" id="10_quko1"]
 [ext_resource type="Texture2D" uid="uid://dechy52vc2212" path="res://sprites/chuva/chuva_animacao02.png" id="11_yyfiw"]
@@ -70,14 +63,11 @@
 [ext_resource type="Texture2D" uid="uid://bp0fvmmsxl1yn" path="res://sprites/chuva/chuva_animacao59.png" id="68_sk7vx"]
 [ext_resource type="Texture2D" uid="uid://byi4v0btpqdsy" path="res://sprites/chuva/chuva_animacao60.png" id="69_5sg1d"]
 [ext_resource type="Texture2D" uid="uid://1uro512d37" path="res://sprites/chuva/chuva_animacao61.png" id="70_10h45"]
+[ext_resource type="TileSet" uid="uid://bmurdljhn225y" path="res://resources/tileset_fase_2.tres" id="70_uhmfs"]
 [ext_resource type="Texture2D" uid="uid://bxixgte6iu7p" path="res://sprites/chuva/chuva_animacao62.png" id="71_jx27d"]
 [ext_resource type="Texture2D" uid="uid://cmho3ekspi2sf" path="res://sprites/backgrounds/bg-predios.png" id="72_ar6nh"]
-[ext_resource type="TileSet" uid="uid://cdw0oo0jy3mxo" path="res://resources/tileset_fase1.tres" id="73_u7v4m"]
 [ext_resource type="PackedScene" uid="uid://bf1xup0u3qsqi" path="res://cenas/tela_dialogo.tscn" id="74_dp1da"]
-[ext_resource type="LabelSettings" uid="uid://dvqqpypdtpyiv" path="res://resources/titulo_label_settings.tres" id="75_y88jy"]
-[ext_resource type="Texture2D" uid="uid://dlpmy35klnir4" path="res://sprites/abroba.png" id="76_jdk1w"]
-[ext_resource type="Texture2D" uid="uid://ct3eyn70sjs2q" path="res://sprites/icone_dialogo.png" id="77_lpomg"]
-[ext_resource type="Texture2D" uid="uid://wg5ewsc818gw" path="res://sprites/Cena urbana/lixeiras/lixos/lixo_virado_abrindo-sheet.png" id="78_xuare"]
+[ext_resource type="Texture2D" uid="uid://dsc2l6eic3y8y" path="res://sprites/Movimentacoes/prototipoMovimentoGato.png" id="75_uhmfs"]
 [ext_resource type="AudioStream" uid="uid://6n7vi0u8qfdp" path="res://sons/Cena 1 (corrigido).ogg" id="79_8fu77"]
 
 [sub_resource type="Animation" id="Animation_ghjkq"]
@@ -97,82 +87,62 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("TelaInicial:visible")
+tracks/1/path = NodePath("SpriteJogador:frame")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [false]
+"values": [0]
 }
-tracks/2/type = "bezier"
+tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("TelaInicial/Vinheta:color:r")
+tracks/2/path = NodePath("Musica:playing")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0)
-}
-tracks/3/type = "bezier"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("TelaInicial/Vinheta:color:g")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0)
-}
-tracks/4/type = "bezier"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("TelaInicial/Vinheta:color:b")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0)
-}
-tracks/5/type = "bezier"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("TelaInicial/Vinheta:color:a")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0)
-}
-tracks/6/type = "value"
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/path = NodePath("Lixeira:frame")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
-}
-tracks/7/type = "value"
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/path = NodePath("Musica:playing")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("SpriteJogador:animation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"walk"]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("SpriteJogador:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-1, 458)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Vinheta/Vinheta:color")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
 }
 
 [sub_resource type="Animation" id="Animation_hg7h3"]
@@ -185,45 +155,9 @@ tracks/0/path = NodePath(".")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0.8666667, 7.5333333, 7.6, 7.6666665, 7.8, 7.8333335, 7.9, 8.066668, 8.133333, 8.293065, 8.333333, 8.366667, 8.566667, 13.431399),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(8.066667, 13.431399),
+"transitions": PackedFloat32Array(1, 1),
 "values": [{
-"args": [],
-"method": &"pausar_animacao"
-}, {
-"args": [ExtResource("5_0qp8d")],
-"method": &"trocar_dialogo"
-}, {
-"args": [],
-"method": &"vozes_1"
-}, {
-"args": [],
-"method": &"pausar_animacao"
-}, {
-"args": [ExtResource("6_fdlp2")],
-"method": &"trocar_dialogo"
-}, {
-"args": [],
-"method": &"vozes_2"
-}, {
-"args": [],
-"method": &"pausar_animacao"
-}, {
-"args": [ExtResource("7_tlx2x")],
-"method": &"trocar_dialogo"
-}, {
-"args": [],
-"method": &"pausar_animacao"
-}, {
-"args": [ExtResource("8_yi8kx")],
-"method": &"trocar_dialogo"
-}, {
-"args": [],
-"method": &"vozes_3"
-}, {
-"args": [],
-"method": &"pausar_animacao"
-}, {
 "args": [],
 "method": &"encerrar_cena"
 }, {
@@ -241,87 +175,67 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0, 7.5313997, 8.566667),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
-"values": [false, true, false]
+"values": [false, false, false]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("TelaInicial:visible")
+tracks/2/path = NodePath("SpriteJogador:frame")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.9220667),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(2.3841858e-07, 0.23333333, 0.46666667, 0.6666667, 0.89, 1.1233331, 1.3566664, 1.5566664, 1.76, 1.9933331, 2.2266665, 2.4266665, 2.67, 2.9033332, 3.1366665, 3.3366666, 3.59, 3.823333, 4.0566664, 4.256666, 4.52, 4.753333, 4.986666, 5.1866665, 5.36, 5.5933332, 5.8266664, 6.0266666, 6.23),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [true, false]
+"values": [0, 1, 2, 3, 0, 1, 2, 3, 0, 1, 2, 3, 0, 1, 2, 3, 0, 1, 2, 3, 0, 1, 2, 3, 0, 1, 2, 3, 0]
 }
-tracks/3/type = "bezier"
+tracks/3/type = "value"
 tracks/3/imported = false
-tracks/3/enabled = false
-tracks/3/path = NodePath("TelaInicial/Vinheta:color:r")
+tracks/3/enabled = true
+tracks/3/path = NodePath("Musica:playing")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0)
-}
-tracks/4/type = "bezier"
-tracks/4/imported = false
-tracks/4/enabled = false
-tracks/4/path = NodePath("TelaInicial/Vinheta:color:g")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0)
-}
-tracks/5/type = "bezier"
-tracks/5/imported = false
-tracks/5/enabled = false
-tracks/5/path = NodePath("TelaInicial/Vinheta:color:b")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0)
-}
-tracks/6/type = "bezier"
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/path = NodePath("TelaInicial/Vinheta:color:a")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = {
-"handle_modes": PackedInt32Array(0, 0),
-"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 0.7)
-}
-tracks/7/type = "value"
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/path = NodePath("Lixeira:frame")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/keys = {
-"times": PackedFloat32Array(0.9333334, 2.1333332, 3.3333335, 4.4666667, 5.5333333, 6.6),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [0, 1, 2, 3, 4, 5]
-}
-tracks/8/type = "value"
-tracks/8/imported = false
-tracks/8/enabled = true
-tracks/8/path = NodePath("Musica:playing")
-tracks/8/interp = 1
-tracks/8/loop_wrap = true
-tracks/8/keys = {
-"times": PackedFloat32Array(0),
+"times": PackedFloat32Array(-1.1),
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("SpriteJogador:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 5.24, 6.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-1, 458), Vector2(900, 458), Vector2(1050, 517.715)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("SpriteJogador:animation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 6.23),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [&"walk", &"idle"]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Vinheta/Vinheta:color")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.59, 7.0333333, 8.043333),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0), Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_bi67x"]
@@ -524,64 +438,56 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_02ugh"]
-bg_color = Color(0, 0, 0, 1)
+[sub_resource type="AtlasTexture" id="AtlasTexture_0ly3m"]
+atlas = ExtResource("75_uhmfs")
+region = Rect2(0, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_q50xi"]
-atlas = ExtResource("78_xuare")
-region = Rect2(0, 0, 64, 32)
+[sub_resource type="AtlasTexture" id="AtlasTexture_s0l17"]
+atlas = ExtResource("75_uhmfs")
+region = Rect2(0, 32, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_edhm8"]
-atlas = ExtResource("78_xuare")
-region = Rect2(64, 0, 64, 32)
+[sub_resource type="AtlasTexture" id="AtlasTexture_gy2yx"]
+atlas = ExtResource("75_uhmfs")
+region = Rect2(32, 32, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_gychk"]
-atlas = ExtResource("78_xuare")
-region = Rect2(128, 0, 64, 32)
+[sub_resource type="AtlasTexture" id="AtlasTexture_7ilwf"]
+atlas = ExtResource("75_uhmfs")
+region = Rect2(64, 32, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ghjkq"]
-atlas = ExtResource("78_xuare")
-region = Rect2(192, 0, 64, 32)
+[sub_resource type="AtlasTexture" id="AtlasTexture_puf8r"]
+atlas = ExtResource("75_uhmfs")
+region = Rect2(96, 32, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_02ugh"]
-atlas = ExtResource("78_xuare")
-region = Rect2(256, 0, 64, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_eh3jl"]
-atlas = ExtResource("78_xuare")
-region = Rect2(320, 0, 64, 32)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_lekaj"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_f7r3v"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_q50xi")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_edhm8")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_gychk")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ghjkq")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_02ugh")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_eh3jl")
+"texture": SubResource("AtlasTexture_0ly3m")
 }],
-"loop": false,
-"name": &"cair a tampa",
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s0l17")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gy2yx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7ilwf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_puf8r")
+}],
+"loop": true,
+"name": &"walk",
 "speed": 5.0
 }]
 
 [node name="Cutscene 1" type="Node2D"]
-script = ExtResource("1_gy2yx")
-voz_1 = ExtResource("2_7ilwf")
-voz_2 = ExtResource("3_puf8r")
-voz_3 = ExtResource("4_f7r3v")
+script = ExtResource("1_uhmfs")
 
 [node name="Animacao" type="AnimationPlayer" parent="."]
 unique_name_in_owner = true
@@ -592,8 +498,6 @@ autoplay = "cutscene 1"
 
 [node name="ParallaxBG" type="CanvasLayer" parent="."]
 layer = -1
-offset = Vector2(64, -128)
-transform = Transform2D(1, 0, 0, 1, 64, -128)
 
 [node name="Ceu" type="Sprite2D" parent="ParallaxBG"]
 scale = Vector2(4, 4)
@@ -615,7 +519,7 @@ centered = false
 
 [node name="Predios" type="Parallax2D" parent="ParallaxBG"]
 scroll_scale = Vector2(1.2, 1)
-scroll_offset = Vector2(0, -128)
+scroll_offset = Vector2(0, -200)
 repeat_size = Vector2(1280, 0)
 repeat_times = 5
 
@@ -624,95 +528,31 @@ scale = Vector2(4, 4)
 texture = ExtResource("72_ar6nh")
 centered = false
 
-[node name="TileMapLayer3" type="TileMapLayer" parent="."]
+[node name="BackGround" type="TileMapLayer" parent="."]
 position = Vector2(0, 64)
 scale = Vector2(4, 4)
-tile_map_data = PackedByteArray("AAAAAAEAAQABAAcAAAABAAEAAQABAAcAAAACAAEAAQABAAcAAAADAAEAAQABAAcAAAAAAAIAAQABAAcAAAABAAIAAQABAAcAAAACAAIAAQABAAcAAAADAAIAAQABAAcAAAAEAAEAAQABAAcAAAAEAAIAAQABAAcAAAD//wAAAQACAAUAAAAAAAAAAQABAAcAAAABAAAAAQABAAcAAAACAAAAAQABAAcAAAADAAAAAQABAAcAAAAEAAAAAQABAAcAAAABAP//AQABAAcAAAACAP//AQABAAcAAAADAP//AQABAAcAAAAEAP//AQABAAcAAAAAAP7/AQABAAcAAAABAP7/AQABAAcAAAACAP7/AQABAAcAAAADAP7/AQABAAcAAAAEAP7/AQABAAcAAAAAAP//AQABAAcAAAAAAAMAAQACAAUAAAABAAMAAQACAAUAAAACAAMAAQACAAUAAAADAAMAAQACAAUAAAAEAAMAAQACAAUAAAAFAAMAAQADAAUAAAAGAAMAAQADAAUAAAAHAAMAAQADAAUAAAAIAAMAAQADAAUAAAAJAAMAAQADAAUAAAAAAAQAAQACAAUAAAAAAAUAAQACAAUAAAABAAQAAQACAAUAAAABAAUAAQACAAUAAAACAAQAAQACAAUAAAACAAUAAQACAAUAAAADAAUAAQACAAUAAAADAAQAAQACAAUAAAAEAAQAAQACAAUAAAAEAAUAAQACAAUAAAAFAAUAAQACAAUAAAAFAAQAAQACAAUAAAAGAAUAAQACAAUAAAAGAAQAAQACAAUAAAAHAAUAAQACAAUAAAAHAAQAAQACAAUAAAAIAAUAAQACAAUAAAAIAAQAAQACAAUAAAAJAAUAAQACAAUAAAAJAAQAAQACAAUAAAA=")
-tile_set = ExtResource("73_u7v4m")
+tile_set = ExtResource("70_uhmfs")
 
-[node name="TileMapLayer" type="TileMapLayer" parent="."]
+[node name="ForeGround" type="TileMapLayer" parent="."]
 position = Vector2(0, 64)
 scale = Vector2(4, 4)
-tile_map_data = PackedByteArray("AAABAAIAAQAAAAEAAAACAAIAAQAAAAEAAAADAAIAAQAAAAEAAAAEAAIAAQAAAAEAAAAFAAIAAQACAAEAAAAGAAIAAQAAAAEAAAAHAAIAAQABAAEAAAAIAAIAAQAAAAEAAAAJAAIAAQABAAEAAAAAAAIAAQADAAEAAAA=")
-tile_set = ExtResource("73_u7v4m")
+tile_map_data = PackedByteArray("AAAOAAIAAAAKAAYAAAAOAAMAAAAKAAcAAAAOAAQAAAAKAAgAAAAOAAUAAAAKAAkAAAAOAAYAAAAKAAoAAAAOAAcAAAAKAAsAAAAPAAIAAAALAAcAAAAPAAMAAAALAAcAAAAPAAQAAAALAAgAAAAPAAUAAAALAAkAAAAPAAYAAAALAAoAAAAPAAcAAAALAAsAAAAQAAIAAAANAAYAAAAQAAMAAAAMAAcAAAAQAAQAAAAMAAgAAAAQAAUAAAAMAAkAAAAQAAYAAAAMAAoAAAAQAAcAAAAMAAsAAAARAAIAAAANAAYAAAARAAMAAAANAAcAAAARAAQAAAANAAgAAAARAAUAAAANAAkAAAARAAYAAAANAAoAAAARAAcAAAANAAsAAAASAAIAAAAOAAcAAAASAAMAAAAOAAcAAAASAAQAAAAOAAgAAAASAAUAAAAOAAkAAAASAAYAAAAOAAoAAAASAAcAAAAOAAsAAAATAAIAAAAPAAYAAAATAAMAAAAPAAcAAAATAAQAAAAPAAgAAAATAAUAAAAPAAkAAAATAAYAAAAPAAoAAAATAAcAAAAPAAsAAAAOAAEAAAAKAAYAAAAOAAAAAAAKAAYAAAAOAP//AAAKAAYAAAATAAEAAAAPAAYAAAATAAAAAAAPAAYAAAATAP//AAAPAAYAAAAPAAEAAAALAAcAAAAQAAEAAAAKAAkAAAARAAEAAAAPAAkAAAASAAEAAAAOAAcAAAAPAAAAAAALAAcAAAAQAAAAAAAKAAkAAAARAAAAAAAPAAkAAAASAAAAAAAOAAcAAAAPAP//AAALAAcAAAAQAP//AAAKAAkAAAARAP//AAAPAAkAAAASAP//AAAOAAcAAAAAAAcAAAAAAAsAAAABAAcAAAABAAsAAAACAAcAAAACAAsAAAADAAcAAAADAAsAAAAEAAcAAAAEAAsAAAAFAAcAAAAAAAsAAAAGAAcAAAABAAsAAAAHAAcAAAACAAsAAAAIAAcAAAADAAsAAAAJAAcAAAAEAAsAAAAKAAcAAAAFAAsAAAALAAcAAAAGAAsAAAAMAAcAAAAHAAsAAAANAAcAAAAIAAsAAAAAAAgAAAAJAAsAAAABAAgAAAAJAAsAAAACAAgAAAAJAAsAAAADAAgAAAAJAAsAAAAEAAgAAAAJAAsAAAAFAAgAAAAJAAsAAAAGAAgAAAAJAAsAAAAHAAgAAAAJAAsAAAAIAAgAAAAJAAsAAAAJAAgAAAAJAAsAAAAKAAkAAAAJAAsAAAALAAkAAAAJAAsAAAAMAAkAAAAJAAsAAAANAAkAAAAJAAsAAAAOAAkAAAAJAAsAAAAPAAkAAAAJAAsAAAAQAAkAAAAJAAsAAAARAAkAAAAJAAsAAAASAAkAAAAJAAsAAAATAAkAAAAJAAsAAAD//wgAAAAJAAsAAAD//wkAAAAJAAsAAAD//woAAAAJAAsAAAD//wsAAAAJAAsAAAD//wwAAAAJAAsAAAAAAAkAAAAJAAsAAAAAAAoAAAAJAAsAAAAAAAsAAAAJAAsAAAAAAAwAAAAJAAsAAAABAAkAAAAJAAsAAAABAAoAAAAJAAsAAAABAAsAAAAJAAsAAAABAAwAAAAJAAsAAAACAAkAAAAJAAsAAAACAAoAAAAJAAsAAAACAAsAAAAJAAsAAAACAAwAAAAJAAsAAAADAAkAAAAJAAsAAAADAAoAAAAJAAsAAAADAAsAAAAJAAsAAAADAAwAAAAJAAsAAAAEAAkAAAAJAAsAAAAEAAoAAAAJAAsAAAAEAAsAAAAJAAsAAAAEAAwAAAAJAAsAAAAFAAkAAAAJAAsAAAAFAAoAAAAJAAsAAAAFAAsAAAAJAAsAAAAFAAwAAAAJAAsAAAAGAAkAAAAJAAsAAAAGAAoAAAAJAAsAAAAGAAsAAAAJAAsAAAAGAAwAAAAJAAsAAAAHAAkAAAAJAAsAAAAHAAoAAAAJAAsAAAAHAAsAAAAJAAsAAAAHAAwAAAAJAAsAAAAIAAkAAAAJAAsAAAAIAAoAAAAJAAsAAAAIAAsAAAAJAAsAAAAIAAwAAAAJAAsAAAAJAAkAAAAJAAsAAAAJAAoAAAAJAAsAAAAJAAsAAAAJAAsAAAAJAAwAAAAJAAsAAAAKAAgAAAAJAAsAAAAKAAoAAAAJAAsAAAAKAAsAAAAJAAsAAAAKAAwAAAAJAAsAAAALAAgAAAAJAAsAAAALAAoAAAAJAAsAAAALAAsAAAAJAAsAAAALAAwAAAAJAAsAAAAMAAgAAAAJAAsAAAAMAAoAAAAJAAsAAAAMAAsAAAAJAAsAAAAMAAwAAAAJAAsAAAANAAgAAAAJAAsAAAANAAoAAAAJAAsAAAANAAsAAAAJAAsAAAANAAwAAAAJAAsAAAAOAAgAAAAJAAsAAAAOAAoAAAAJAAsAAAAOAAsAAAAJAAsAAAAOAAwAAAAJAAsAAAAPAAgAAAAJAAsAAAAPAAoAAAAJAAsAAAAPAAsAAAAJAAsAAAAPAAwAAAAJAAsAAAAQAAgAAAAJAAsAAAAQAAoAAAAJAAsAAAAQAAsAAAAJAAsAAAAQAAwAAAAJAAsAAAARAAgAAAAJAAsAAAARAAoAAAAJAAsAAAARAAsAAAAJAAsAAAARAAwAAAAJAAsAAAASAAgAAAAJAAsAAAASAAoAAAAJAAsAAAASAAsAAAAJAAsAAAASAAwAAAAJAAsAAAATAAgAAAAJAAsAAAATAAoAAAAJAAsAAAATAAsAAAAJAAsAAAATAAwAAAAJAAsAAAA=")
+tile_set = ExtResource("70_uhmfs")
 
-[node name="TileMapLayer2" type="TileMapLayer" parent="."]
+[node name="Objetos" type="TileMapLayer" parent="."]
 position = Vector2(0, 64)
 scale = Vector2(4, 4)
-tile_map_data = PackedByteArray("AAAHAAEAAQAEAAMAAAAHAAIAAQAEAAQAAAAIAAEAAQAFAAMAAAAIAAIAAQAFAAQAAAAJAAEAAQAGAAMAAAAJAAIAAQAGAAQAAAABAAIAAQAEAAMAAAABAAMAAQAEAAQAAAACAAIAAQAFAAMAAAACAAMAAQAFAAQAAAADAAIAAQAGAAMAAAADAAMAAQAGAAQAAAA=")
-tile_set = ExtResource("73_u7v4m")
+tile_set = ExtResource("70_uhmfs")
 
 [node name="Dialogo" parent="." instance=ExtResource("74_dp1da")]
 visible = false
 
-[node name="TelaInicial" type="CanvasLayer" parent="."]
-visible = false
-
-[node name="PanelContainer" type="PanelContainer" parent="TelaInicial"]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_02ugh")
-
-[node name="CenterContainer" type="CenterContainer" parent="TelaInicial/PanelContainer"]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="TelaInicial/PanelContainer/CenterContainer"]
-layout_mode = 2
-text = "Nenhum animal foi ferido
-durante o desenvolvimento deste jogo."
-label_settings = ExtResource("75_y88jy")
-horizontal_alignment = 1
-
-[node name="Abroba" type="TextureRect" parent="TelaInicial"]
-custom_minimum_size = Vector2(128, 128)
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -570.99994
-offset_top = 182.0
-offset_right = -442.99994
-offset_bottom = 310.0
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_horizontal = 0
-size_flags_vertical = 8
-texture = ExtResource("76_jdk1w")
-
-[node name="IconeContinuarInicial" type="TextureButton" parent="TelaInicial"]
-unique_name_in_owner = true
-custom_minimum_size = Vector2(64, 64)
-offset_left = 1182.0
-offset_top = 624.0
-offset_right = 1246.0
-offset_bottom = 688.0
-size_flags_horizontal = 0
-size_flags_vertical = 8
-texture_normal = ExtResource("77_lpomg")
-texture_pressed = ExtResource("77_lpomg")
-texture_hover = ExtResource("77_lpomg")
-texture_disabled = ExtResource("77_lpomg")
-texture_focused = ExtResource("77_lpomg")
-
-[node name="Vinheta" type="ColorRect" parent="TelaInicial"]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 1
-color = Color(0, 0, 0, 1)
-
-[node name="Lixeira" type="AnimatedSprite2D" parent="."]
-position = Vector2(227, 304)
+[node name="SpriteJogador" type="AnimatedSprite2D" parent="."]
+position = Vector2(-1, 458)
 scale = Vector2(4, 4)
-sprite_frames = SubResource("SpriteFrames_lekaj")
-animation = &"cair a tampa"
-autoplay = "cair a tampa"
+sprite_frames = SubResource("SpriteFrames_f7r3v")
+animation = &"walk"
+autoplay = "walk"
 speed_scale = 0.0
 
 [node name="Musica" type="AudioStreamPlayer" parent="."]
@@ -722,3 +562,23 @@ parameters/looping = true
 
 [node name="Vozes" type="AudioStreamPlayer" parent="."]
 unique_name_in_owner = true
+
+[node name="Vinheta" type="CanvasLayer" parent="."]
+
+[node name="Vinheta" type="ColorRect" parent="Vinheta"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+color = Color(0, 0, 0, 1)
+
+[node name="Vinheta2" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+color = Color(0, 0, 0, 1)
