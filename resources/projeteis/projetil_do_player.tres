@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="TipoProjetil" load_steps=3 format=3 uid="uid://xc115sc6cvie"]
+
+[ext_resource type="SpriteFrames" uid="uid://cwtjdguyd4pc2" path="res://sprites/projetil/projetil_player.tres" id="1_bnqfc"]
+[ext_resource type="Script" uid="uid://iv1avjqj6qlp" path="res://scripts/resources_custom/TipoProjetil.gd" id="1_iu1nx"]
+
+[resource]
+script = ExtResource("1_iu1nx")
+ANIMACAO = ExtResource("1_bnqfc")
+metadata/_custom_type_script = "uid://iv1avjqj6qlp"

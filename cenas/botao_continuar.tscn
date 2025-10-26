@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://yj61mxmjbrf0"]
+
+[ext_resource type="Texture2D" uid="uid://ct3eyn70sjs2q" path="res://sprites/icone_dialogo.png" id="1_3s85m"]
+
+[node name="IconeContinuarVinheta" type="TextureButton"]
+custom_minimum_size = Vector2(64, 64)
+offset_right = 64.0
+offset_bottom = 64.0
+size_flags_horizontal = 0
+size_flags_vertical = 8
+texture_normal = ExtResource("1_3s85m")
+texture_pressed = ExtResource("1_3s85m")
+texture_hover = ExtResource("1_3s85m")
+texture_disabled = ExtResource("1_3s85m")
+texture_focused = ExtResource("1_3s85m")

@@ -18,11 +18,19 @@ config/icon="res://icon.svg"
 [autoload]
 
 GameState="*res://scripts/GameState.gd"
+SceneController="*res://scripts/SceneController.gd"
+Cortina="*res://cenas/TransicaoDeCenas/Cortina.gd"
 
 [display]
 
 window/size/viewport_width=1280
 window/size/viewport_height=720
+
+[global_group]
+
+recebe_dano=""
+inimigo=""
+player=""
 
 [input]
 

@@ -1,0 +1,133 @@
+[gd_scene load_steps=19 format=3 uid="uid://6nyvc8yd3wyt"]
+
+[ext_resource type="Texture2D" uid="uid://dmb1wjceig85v" path="res://sprites/Movimentacoes/prototipoInicialCaveira.png" id="1_8jibh"]
+[ext_resource type="Script" uid="uid://bffn55af60fj2" path="res://scripts/inimigos/caveira.gd" id="1_c8kd3"]
+[ext_resource type="Texture2D" uid="uid://cdeufq01aatay" path="res://sprites/spritesheet.png" id="2_s6xte"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_c8kd3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_re1gh"]
+atlas = ExtResource("2_s6xte")
+region = Rect2(0, 0, 64, 58)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7rv2m"]
+atlas = ExtResource("2_s6xte")
+region = Rect2(64, 0, 64, 58)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ioal7"]
+atlas = ExtResource("2_s6xte")
+region = Rect2(128, 0, 64, 58)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0qbf6"]
+atlas = ExtResource("2_s6xte")
+region = Rect2(192, 0, 64, 58)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5vdln"]
+atlas = ExtResource("2_s6xte")
+region = Rect2(256, 0, 64, 58)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3x5o3"]
+atlas = ExtResource("2_s6xte")
+region = Rect2(320, 0, 64, 58)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0a6au"]
+atlas = ExtResource("2_s6xte")
+region = Rect2(384, 0, 64, 58)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s6xte"]
+atlas = ExtResource("1_8jibh")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xida0"]
+atlas = ExtResource("1_8jibh")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_65087"]
+atlas = ExtResource("1_8jibh")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6ee8a"]
+atlas = ExtResource("1_8jibh")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b6863"]
+atlas = ExtResource("1_8jibh")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_re1gh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_re1gh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7rv2m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ioal7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0qbf6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5vdln")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3x5o3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0a6au")
+}],
+"loop": false,
+"name": &"death",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s6xte")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xida0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_65087")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6ee8a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b6863")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_s6xte"]
+radius = 19.0
+
+[node name="Inimigo" type="CharacterBody2D" groups=["inimigo", "recebe_dano"]]
+script = ExtResource("1_c8kd3")
+
+[node name="Collision" type="CollisionShape2D" parent="."]
+unique_name_in_owner = true
+shape = SubResource("CapsuleShape2D_c8kd3")
+
+[node name="Sprites" type="AnimatedSprite2D" parent="."]
+unique_name_in_owner = true
+process_mode = 3
+position = Vector2(2, 0)
+sprite_frames = SubResource("SpriteFrames_re1gh")
+animation = &"death"
+autoplay = "default"
+
+[node name="Andando" type="Timer" parent="."]
+unique_name_in_owner = true
+one_shot = true
+autostart = true
+
+[node name="HurtBox" type="Area2D" parent="."]
+unique_name_in_owner = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
+shape = SubResource("CircleShape2D_s6xte")

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dopoxsroujnrl"
-path="res://.godot/imported/bg-ceu.png-98a09bc6d90cd0242bb9fb306360ae90.ctex"
+uid="uid://biibuk6rscksx"
+path="res://.godot/imported/projetil_vfx_player11.png-72c5ccd72ea06b4ff00052719ba52f4a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/bg-ceu.png"
-dest_files=["res://.godot/imported/bg-ceu.png-98a09bc6d90cd0242bb9fb306360ae90.ctex"]
+source_file="res://sprites/projetil/projetil_vfx_player/projetil_vfx_player11.png"
+dest_files=["res://.godot/imported/projetil_vfx_player11.png-72c5ccd72ea06b4ff00052719ba52f4a.ctex"]
 
 [params]
 

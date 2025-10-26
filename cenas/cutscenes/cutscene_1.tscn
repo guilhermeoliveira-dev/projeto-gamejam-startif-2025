@@ -1,0 +1,335 @@
+[gd_scene load_steps=21 format=3 uid="uid://c2cbwmfn704cc"]
+
+[ext_resource type="Script" uid="uid://dvu38ktibmbc3" path="res://scripts/cutscene.gd" id="1_b4aly"]
+[ext_resource type="Resource" uid="uid://cmvb2pgnpagsv" path="res://resources/cutscene_1_dialogos/fala_1.tres" id="2_fy2fd"]
+[ext_resource type="Resource" uid="uid://ed8rblc5ao36" path="res://resources/cutscene_1_dialogos/fala_2.tres" id="3_4ycqx"]
+[ext_resource type="PackedScene" uid="uid://bf1xup0u3qsqi" path="res://cenas/tela_dialogo.tscn" id="4_q50xi"]
+[ext_resource type="LabelSettings" uid="uid://dvqqpypdtpyiv" path="res://resources/titulo_label_settings.tres" id="5_edhm8"]
+[ext_resource type="Texture2D" uid="uid://dlpmy35klnir4" path="res://sprites/abroba.png" id="6_gychk"]
+[ext_resource type="Texture2D" uid="uid://ct3eyn70sjs2q" path="res://sprites/icone_dialogo.png" id="7_fy2fd"]
+[ext_resource type="Texture2D" uid="uid://wg5ewsc818gw" path="res://sprites/Cena urbana/lixo_virado_abrindo-sheet.png" id="8_4ycqx"]
+
+[sub_resource type="Animation" id="Animation_ghjkq"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Dialogo:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TelaInicial:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("TelaInicial/Vinheta:color:r")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("TelaInicial/Vinheta:color:g")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("TelaInicial/Vinheta:color:b")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/5/type = "bezier"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("TelaInicial/Vinheta:color:a")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_hg7h3"]
+resource_name = "cutscene 1"
+length = 10.0
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(1.1666666, 1.2654, 1.9314, 2.0333333, 3.1, 3.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [],
+"method": &"pausar_animacao"
+}, {
+"args": [ExtResource("2_fy2fd")],
+"method": &"trocar_dialogo"
+}, {
+"args": [],
+"method": &"pausar_animacao"
+}, {
+"args": [ExtResource("3_4ycqx")],
+"method": &"trocar_dialogo"
+}, {
+"args": [],
+"method": &"pausar_animacao"
+}, {
+"args": [],
+"method": &"encerrar_cena"
+}]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Dialogo:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.2654),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("TelaInicial:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.2654),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = false
+tracks/3/path = NodePath("TelaInicial/Vinheta:color:r")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = false
+tracks/4/path = NodePath("TelaInicial/Vinheta:color:g")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/5/type = "bezier"
+tracks/5/imported = false
+tracks/5/enabled = false
+tracks/5/path = NodePath("TelaInicial/Vinheta:color:b")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/6/type = "bezier"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("TelaInicial/Vinheta:color:a")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1.0656)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_bi67x"]
+_data = {
+&"RESET": SubResource("Animation_ghjkq"),
+&"cutscene 1": SubResource("Animation_hg7h3")
+}
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_02ugh"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q50xi"]
+atlas = ExtResource("8_4ycqx")
+region = Rect2(0, 0, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_edhm8"]
+atlas = ExtResource("8_4ycqx")
+region = Rect2(64, 0, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gychk"]
+atlas = ExtResource("8_4ycqx")
+region = Rect2(128, 0, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ghjkq"]
+atlas = ExtResource("8_4ycqx")
+region = Rect2(192, 0, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_02ugh"]
+atlas = ExtResource("8_4ycqx")
+region = Rect2(256, 0, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eh3jl"]
+atlas = ExtResource("8_4ycqx")
+region = Rect2(320, 0, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7atxy"]
+atlas = ExtResource("8_4ycqx")
+region = Rect2(0, 0, 64, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lekaj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q50xi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_edhm8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gychk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ghjkq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_02ugh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eh3jl")
+}],
+"loop": false,
+"name": &"cair a tampa",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7atxy")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[node name="Cutscene 1" type="Node2D"]
+script = ExtResource("1_b4aly")
+
+[node name="Animacao" type="AnimationPlayer" parent="."]
+unique_name_in_owner = true
+libraries = {
+&"": SubResource("AnimationLibrary_bi67x")
+}
+autoplay = "cutscene 1"
+
+[node name="Dialogo" parent="." instance=ExtResource("4_q50xi")]
+visible = false
+
+[node name="TelaInicial" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="PanelContainer" type="PanelContainer" parent="TelaInicial"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_02ugh")
+
+[node name="CenterContainer" type="CenterContainer" parent="TelaInicial/PanelContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="TelaInicial/PanelContainer/CenterContainer"]
+layout_mode = 2
+text = "Nenhum animal foi ferido
+durante o desenvolvimento deste jogo."
+label_settings = ExtResource("5_edhm8")
+horizontal_alignment = 1
+
+[node name="Abroba" type="TextureRect" parent="TelaInicial"]
+custom_minimum_size = Vector2(128, 128)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -570.99994
+offset_top = 182.0
+offset_right = -442.99994
+offset_bottom = 310.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+texture = ExtResource("6_gychk")
+
+[node name="IconeContinuarInicial" type="TextureButton" parent="TelaInicial"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(64, 64)
+offset_left = 1182.0
+offset_top = 624.0
+offset_right = 1246.0
+offset_bottom = 688.0
+size_flags_horizontal = 0
+size_flags_vertical = 8
+texture_normal = ExtResource("7_fy2fd")
+texture_pressed = ExtResource("7_fy2fd")
+texture_hover = ExtResource("7_fy2fd")
+texture_disabled = ExtResource("7_fy2fd")
+texture_focused = ExtResource("7_fy2fd")
+
+[node name="Vinheta" type="ColorRect" parent="TelaInicial"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+color = Color(0, 0, 0, 1)
+
+[node name="Lixeira" type="AnimatedSprite2D" parent="."]
+position = Vector2(323, 145)
+scale = Vector2(4, 4)
+sprite_frames = SubResource("SpriteFrames_lekaj")
+animation = &"cair a tampa"
+autoplay = "idle"
