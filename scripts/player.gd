@@ -43,6 +43,13 @@ signal player_morreu()
 var ultima_direcao: float = 1
 var direcao: float = 0
 
+
+func _ready():
+	
+	player_morreu.connect(reiniciar_fase)
+	
+
+
 func _physics_process(delta):
 	
 	
@@ -67,6 +74,11 @@ func _physics_process(delta):
 		invocar_projetil()
 	
 	move_and_slide()
+
+func reiniciar_fase():
+	
+	SceneController.reloadCurrentScene()
+	
 
 func _process(_delta):
 	
@@ -102,6 +114,7 @@ func receber_dano(dano: float):
 		return
 	
 	vida -= dano
+	
 	invincibilidade_timer.start()
 	#recebeu_dano.emit(vida)
 

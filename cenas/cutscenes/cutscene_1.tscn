@@ -1,6 +1,6 @@
 [gd_scene load_steps=92 format=4 uid="uid://c2cbwmfn704cc"]
 
-[ext_resource type="Script" path="res://scripts/cutscene_1.gd" id="1_b4aly"]
+[ext_resource type="Script" uid="uid://dvu38ktibmbc3" path="res://scripts/cutscene_1.gd" id="1_b4aly"]
 [ext_resource type="Resource" uid="uid://cmvb2pgnpagsv" path="res://resources/cutscene_1_dialogos/fala_1.tres" id="2_fy2fd"]
 [ext_resource type="AudioStream" uid="uid://dwovj0f7idwgi" path="res://sons/Sussurros.ogg" id="2_gychk"]
 [ext_resource type="Resource" uid="uid://ed8rblc5ao36" path="res://resources/cutscene_1_dialogos/fala_2.tres" id="3_4ycqx"]
@@ -661,7 +661,7 @@ layout_mode = 2
 
 [node name="Label" type="Label" parent="TelaInicial/PanelContainer/CenterContainer"]
 layout_mode = 2
-text = "Nenhum animal foi ferido
+text = "Nenhum gatinho foi ferido
 durante o desenvolvimento deste jogo."
 label_settings = ExtResource("5_edhm8")
 horizontal_alignment = 1

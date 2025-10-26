@@ -106,6 +106,7 @@ func receber_dano(dano: float):
 
 func remover():
 	queue_free()
+	SceneController.changeSceneTo("res://cenas/cutscenes/cutscene_3.tscn")
 
 func mudar_direcao():
 	

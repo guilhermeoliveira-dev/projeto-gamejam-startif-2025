@@ -1,8 +1,8 @@
-[gd_scene load_steps=14 format=3 uid="uid://blpa7jm8gninj"]
+[gd_scene load_steps=17 format=3 uid="uid://blpa7jm8gninj"]
 
 [ext_resource type="Script" uid="uid://bdgu0223sybgl" path="res://scripts/inimigos/boss_1.gd" id="1_0dcvt"]
 [ext_resource type="Texture2D" uid="uid://cdeufq01aatay" path="res://sprites/spritesheet.png" id="2_ox4q6"]
-[ext_resource type="Texture2D" uid="uid://d04pvgqswq468" path="res://sprites/player_placeholder.png" id="3_7av1j"]
+[ext_resource type="Texture2D" uid="uid://cpc3ek3rfwsvj" path="res://sprites/Movimentacoes/movimentacaoAboboraBoss.png" id="3_0dcvt"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_c8kd3"]
 radius = 22.45
@@ -36,6 +36,18 @@ region = Rect2(320, 0, 64, 58)
 atlas = ExtResource("2_ox4q6")
 region = Rect2(384, 0, 64, 58)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_ox4q6"]
+atlas = ExtResource("3_0dcvt")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7av1j"]
+atlas = ExtResource("3_0dcvt")
+region = Rect2(0, 128, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0td83"]
+atlas = ExtResource("3_0dcvt")
+region = Rect2(0, 256, 128, 128)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_re1gh"]
 animations = [{
 "frames": [{
@@ -66,7 +78,13 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_7av1j")
+"texture": SubResource("AtlasTexture_ox4q6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7av1j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0td83")
 }],
 "loop": true,
 "name": &"default",
@@ -81,7 +99,7 @@ script = ExtResource("1_0dcvt")
 vida_maxima = 50.0
 distancia_descongelar = 120.0
 dano_causado = 15.0
-distancia_ataque = 160.0
+distancia_ataque = 300.0
 
 [node name="Collision" type="CollisionShape2D" parent="."]
 unique_name_in_owner = true
@@ -90,9 +108,9 @@ shape = SubResource("CapsuleShape2D_c8kd3")
 [node name="Sprites" type="AnimatedSprite2D" parent="."]
 unique_name_in_owner = true
 process_mode = 3
-position = Vector2(2, 0)
-scale = Vector2(4, 4)
+position = Vector2(13, 7)
 sprite_frames = SubResource("SpriteFrames_re1gh")
+animation = &"death"
 autoplay = "default"
 
 [node name="Andando" type="Timer" parent="."]

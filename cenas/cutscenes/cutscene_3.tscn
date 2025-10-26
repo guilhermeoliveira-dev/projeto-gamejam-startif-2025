@@ -1,0 +1,63 @@
+[gd_scene load_steps=6 format=3 uid="uid://qtlrlauw0237"]
+
+[ext_resource type="Script" uid="uid://cnlqlvbrhhc7r" path="res://scripts/cutscene_3.gd" id="1_o2nj2"]
+[ext_resource type="LabelSettings" uid="uid://dvqqpypdtpyiv" path="res://resources/titulo_label_settings.tres" id="66_jwxgv"]
+[ext_resource type="Texture2D" uid="uid://dlpmy35klnir4" path="res://sprites/abroba.png" id="67_tbbd6"]
+[ext_resource type="Texture2D" uid="uid://ct3eyn70sjs2q" path="res://sprites/icone_dialogo.png" id="68_qccrg"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_io78o"]
+bg_color = Color(0, 0, 0, 1)
+
+[node name="Cutscene 3" type="Node2D"]
+script = ExtResource("1_o2nj2")
+
+[node name="TelaInicial" type="CanvasLayer" parent="."]
+
+[node name="PanelContainer" type="PanelContainer" parent="TelaInicial"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_io78o")
+
+[node name="CenterContainer" type="CenterContainer" parent="TelaInicial/PanelContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="TelaInicial/PanelContainer/CenterContainer"]
+layout_mode = 2
+text = "Obrigado por Jogar!"
+label_settings = ExtResource("66_jwxgv")
+horizontal_alignment = 1
+
+[node name="Abroba" type="TextureRect" parent="TelaInicial"]
+custom_minimum_size = Vector2(128, 128)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -570.99994
+offset_top = 182.0
+offset_right = -442.99994
+offset_bottom = 310.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+texture = ExtResource("67_tbbd6")
+
+[node name="IconeContinuarInicial" type="TextureButton" parent="TelaInicial"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(64, 64)
+offset_left = 1182.0
+offset_top = 624.0
+offset_right = 1246.0
+offset_bottom = 688.0
+size_flags_horizontal = 0
+size_flags_vertical = 8
+texture_normal = ExtResource("68_qccrg")
+texture_pressed = ExtResource("68_qccrg")
+texture_hover = ExtResource("68_qccrg")
+texture_disabled = ExtResource("68_qccrg")
+texture_focused = ExtResource("68_qccrg")
