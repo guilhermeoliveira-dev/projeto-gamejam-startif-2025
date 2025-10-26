@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bn5x4mq1snboq"
-path="res://.godot/imported/tileset_urbano.png-2b4c923a0e781f3e33bde91d3207425d.ctex"
+uid="uid://cpc3ek3rfwsvj"
+path="res://.godot/imported/movimentacaoAboboraBoss.png-d8a9cfcd3cb6294c46fcf513bf1c5741.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/Cena urbana/tileset_urbano.png"
-dest_files=["res://.godot/imported/tileset_urbano.png-2b4c923a0e781f3e33bde91d3207425d.ctex"]
+source_file="res://sprites/Movimentacoes/movimentacaoAboboraBoss.png"
+dest_files=["res://.godot/imported/movimentacaoAboboraBoss.png-d8a9cfcd3cb6294c46fcf513bf1c5741.ctex"]
 
 [params]
 

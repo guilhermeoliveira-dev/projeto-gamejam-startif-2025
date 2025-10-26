@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://o1vg6e8jpkpp"
-path="res://.godot/imported/tileset_urbano_novo.png-3699824318e5fd96a02e3b8087369d49.ctex"
+uid="uid://8g4loy4b31wg"
+path="res://.godot/imported/tilesetMuseu.png-c4bde1705c6b4f8a7012380279d47cbe.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/Cena urbana/tileset_urbano_novo.png"
-dest_files=["res://.godot/imported/tileset_urbano_novo.png-3699824318e5fd96a02e3b8087369d49.ctex"]
+source_file="res://sprites/Movimentacoes/tilesetMuseu.png"
+dest_files=["res://.godot/imported/tilesetMuseu.png-c4bde1705c6b4f8a7012380279d47cbe.ctex"]
 
 [params]
 
