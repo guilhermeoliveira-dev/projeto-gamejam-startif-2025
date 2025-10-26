@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://davvcmn7hos76"
+path="res://.godot/imported/Helena (Essa voz... Sou eu).ogg-bbd2044f9e8a79ccf8e1fe6222addea7.oggvorbisstr"
+
+[deps]
+
+source_file="res://sons/Helena (Essa voz... Sou eu).ogg"
+dest_files=["res://.godot/imported/Helena (Essa voz... Sou eu).ogg-bbd2044f9e8a79ccf8e1fe6222addea7.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

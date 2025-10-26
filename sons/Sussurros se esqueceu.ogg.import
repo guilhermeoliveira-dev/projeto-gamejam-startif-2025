@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dcnl6qe45ffpy"
+path="res://.godot/imported/Sussurros se esqueceu.ogg-8d01b7293b2e57c81355dc7a5bbdc7df.oggvorbisstr"
+
+[deps]
+
+source_file="res://sons/Sussurros se esqueceu.ogg"
+dest_files=["res://.godot/imported/Sussurros se esqueceu.ogg-8d01b7293b2e57c81355dc7a5bbdc7df.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

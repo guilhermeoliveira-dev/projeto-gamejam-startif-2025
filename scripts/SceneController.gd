@@ -6,6 +6,8 @@ extends Node
 ## Sempre que rode uma transição, reseta a posição do foco
 var resetFocus := true
 
+var progresso_musica: float = 0
+
 ##Muda a cena para a cena de caminho [param path], com transição inicial [param animacao1] e transição final [param animacao2]
 ##Possíveis animacoes: [br][br]Diamond[br]Circle[br]CircleToon[br]Fade[br]
 func changeSceneTo(path : StringName):

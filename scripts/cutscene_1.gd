@@ -6,6 +6,12 @@ class_name Cutscene
 
 @onready var icone_continuar: TextureButton = %IconeContinuarInicial
 
+@onready var vozes_player: AudioStreamPlayer = %Vozes
+@onready var musica_player: AudioStreamPlayer = %Musica
+
+
+
+
 signal dialogo_atual_alterado
 var dialogo_atual: DialogoResource:
 	set(valor):
@@ -45,5 +51,22 @@ func trocar_dialogo(dialogo: DialogoResource):
 
 func encerrar_cena():
 	
+	#musica_player.stream.
 	SceneController.changeSceneTo("res://cenas/fases/fase1.tscn")
 	
+
+@export var voz_1: AudioStreamOggVorbis
+@export var voz_2: AudioStreamOggVorbis
+@export var voz_3: AudioStreamOggVorbis
+
+
+func vozes_1():
+	vozes_player.stream = voz_1
+	vozes_player.play()
+	
+func vozes_2():
+	vozes_player.stream = voz_2
+	vozes_player.play()
+func vozes_3():
+	vozes_player.stream = voz_3
+	vozes_player.play()

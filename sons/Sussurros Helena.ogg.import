@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cqvem7x2jevhn"
+path="res://.godot/imported/Sussurros Helena.ogg-aed2d1624fd50ae0e74c3fa403bdcd47.oggvorbisstr"
+
+[deps]
+
+source_file="res://sons/Sussurros Helena.ogg"
+dest_files=["res://.godot/imported/Sussurros Helena.ogg-aed2d1624fd50ae0e74c3fa403bdcd47.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

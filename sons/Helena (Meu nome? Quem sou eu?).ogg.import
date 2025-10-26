@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://b0sgfmesv4q8a"
+path="res://.godot/imported/Helena (Meu nome? Quem sou eu?).ogg-436b57ebde7164b30022acb022bdb04d.oggvorbisstr"
+
+[deps]
+
+source_file="res://sons/Helena (Meu nome? Quem sou eu?).ogg"
+dest_files=["res://.godot/imported/Helena (Meu nome? Quem sou eu?).ogg-436b57ebde7164b30022acb022bdb04d.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

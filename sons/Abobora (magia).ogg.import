@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cfkpncs0ggier"
+path="res://.godot/imported/Abobora (magia).ogg-fe8aeebcd211b84e5015f921b867b070.oggvorbisstr"
+
+[deps]
+
+source_file="res://sons/Abobora (magia).ogg"
+dest_files=["res://.godot/imported/Abobora (magia).ogg-fe8aeebcd211b84e5015f921b867b070.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

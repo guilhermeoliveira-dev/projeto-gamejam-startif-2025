@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="DialogoResource" load_steps=3 format=3 uid="uid://iubp1d8h020b"]
+
+[ext_resource type="LabelSettings" uid="uid://7aopcerj0dbw" path="res://resources/dialogo_label_settings.tres" id="1_4gaql"]
+[ext_resource type="Script" uid="uid://cqodi24y1tx8h" path="res://scripts/resources_custom/DialogoResource.gd" id="2_lqeai"]
+
+[resource]
+script = ExtResource("2_lqeai")
+nome = "Voz anônima: "
+dialogo = "Venha até mim, querida, venha."
+dialogo_label_settings = ExtResource("1_4gaql")
+metadata/_custom_type_script = "uid://cqodi24y1tx8h"
