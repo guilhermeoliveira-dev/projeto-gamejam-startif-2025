@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="projeto-gamejam-startif-2025"
-run/main_scene="uid://bxjnks2j3uc0v"
+run/main_scene="uid://c2cbwmfn704cc"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="res://icon.svg"
 
@@ -25,6 +25,16 @@ Cortina="*res://cenas/TransicaoDeCenas/Cortina.gd"
 
 window/size/viewport_width=1280
 window/size/viewport_height=720
+
+[file_customization]
+
+folder_colors={
+"res://cenas/": "red",
+"res://resources/": "purple",
+"res://scripts/": "yellow",
+"res://sons/": "green",
+"res://sprites/": "blue"
+}
 
 [global_group]
 

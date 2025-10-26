@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dobgpxvtp2coc"
+path="res://.godot/imported/Abobora (dano).ogg-652300a82292333581ac7521f46307cd.oggvorbisstr"
+
+[deps]
+
+source_file="res://sons/Abobora (dano).ogg"
+dest_files=["res://.godot/imported/Abobora (dano).ogg-652300a82292333581ac7521f46307cd.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://7rp8u1jy1pgm"
+path="res://.godot/imported/Helena (Quem e Voce).ogg-797afa23c389ff8573dd5956aa7e175f.oggvorbisstr"
+
+[deps]
+
+source_file="res://sons/Helena (Quem e Voce).ogg"
+dest_files=["res://.godot/imported/Helena (Quem e Voce).ogg-797afa23c389ff8573dd5956aa7e175f.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

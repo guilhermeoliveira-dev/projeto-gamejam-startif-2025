@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://depswb6xek0kd"
+path="res://.godot/imported/Helena (Eu me lembro de tudo).ogg-0901ef8b25ada7a9a5e2226b8d4b97af.oggvorbisstr"
+
+[deps]
+
+source_file="res://sons/Helena (Eu me lembro de tudo).ogg"
+dest_files=["res://.godot/imported/Helena (Eu me lembro de tudo).ogg-0901ef8b25ada7a9a5e2226b8d4b97af.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

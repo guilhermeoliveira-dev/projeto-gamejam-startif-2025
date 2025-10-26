@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://8l1jyibl2558"
+path="res://.godot/imported/Abobora (morte).ogg-f0d06a73288f2ebcd7002b31c4afda2b.oggvorbisstr"
+
+[deps]
+
+source_file="res://sons/Abobora (morte).ogg"
+dest_files=["res://.godot/imported/Abobora (morte).ogg-f0d06a73288f2ebcd7002b31c4afda2b.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

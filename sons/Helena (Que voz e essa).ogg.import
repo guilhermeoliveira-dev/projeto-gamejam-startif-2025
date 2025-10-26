@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://baidpk4hjkvsf"
+path="res://.godot/imported/Helena (Que voz e essa).ogg-83990fb91030b968192355491ed88880.oggvorbisstr"
+
+[deps]
+
+source_file="res://sons/Helena (Que voz e essa).ogg"
+dest_files=["res://.godot/imported/Helena (Que voz e essa).ogg-83990fb91030b968192355491ed88880.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

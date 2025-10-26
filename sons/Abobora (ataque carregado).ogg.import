@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bbchjdwuf2smu"
+path="res://.godot/imported/Abobora (ataque carregado).ogg-8fbb451ee481f660dd2d9a9f8793a83b.oggvorbisstr"
+
+[deps]
+
+source_file="res://sons/Abobora (ataque carregado).ogg"
+dest_files=["res://.godot/imported/Abobora (ataque carregado).ogg-8fbb451ee481f660dd2d9a9f8793a83b.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
