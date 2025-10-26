@@ -18,6 +18,8 @@ config/icon="res://icon.svg"
 [autoload]
 
 GameState="*res://scripts/GameState.gd"
+SceneController="*res://scripts/SceneController.gd"
+Cortina="*res://cenas/TransicaoDeCenas/Cortina.gd"
 
 [display]
 

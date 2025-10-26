@@ -1,4 +1,4 @@
-[gd_scene load_steps=77 format=4 uid="uid://bxjnks2j3uc0v"]
+[gd_scene load_steps=80 format=4 uid="uid://bxjnks2j3uc0v"]
 
 [ext_resource type="Script" uid="uid://defv2mwc16id4" path="res://scripts/fase_1.gd" id="1_8ts1l"]
 [ext_resource type="Texture2D" uid="uid://dopoxsroujnrl" path="res://sprites/backgrounds/bg-ceu.png" id="2_75m84"]
@@ -67,10 +67,13 @@
 [ext_resource type="Texture2D" uid="uid://cmho3ekspi2sf" path="res://sprites/backgrounds/bg-predios.png" id="65_ejc35"]
 [ext_resource type="AudioStream" uid="uid://6n7vi0u8qfdp" path="res://sons/Cena 1 (corrigido).ogg" id="66_7y2yi"]
 [ext_resource type="Texture2D" uid="uid://bn5x4mq1snboq" path="res://sprites/Cena urbana/tileset_urbano.png" id="67_bbmx4"]
-[ext_resource type="PackedScene" uid="uid://6nyvc8yd3wyt" path="res://cenas/caveira.tscn" id="69_75m84"]
+[ext_resource type="PackedScene" uid="uid://6nyvc8yd3wyt" path="res://cenas/inimigos/caveira.tscn" id="69_75m84"]
 [ext_resource type="PackedScene" uid="uid://qyrqju2tajw1" path="res://cenas/player.tscn" id="69_xnj0b"]
 [ext_resource type="Script" uid="uid://dhho6g2jqum2h" path="res://scripts/ui.gd" id="70_tmj7i"]
 [ext_resource type="LabelSettings" uid="uid://dvqqpypdtpyiv" path="res://resources/titulo_label_settings.tres" id="71_75m84"]
+[ext_resource type="PackedScene" uid="uid://blpa7jm8gninj" path="res://cenas/inimigos/boss_1.tscn" id="72_71wjk"]
+[ext_resource type="PackedScene" uid="uid://bavxisucyhbks" path="res://cenas/projetil.tscn" id="73_t3p1c"]
+[ext_resource type="Resource" uid="uid://cbv6miq5emymd" path="res://resources/projeteis/projetil_do_inimigo.tres" id="74_t5h3g"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_j1u05"]
 animations = [{
@@ -363,11 +366,11 @@ texture = ExtResource("65_ejc35")
 centered = false
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
-tile_map_data = PackedByteArray("AAADAAQAAAACAAEAAAAEAAQAAAABAAEAAAAHAAQAAAAAAAEAAAAIAAQAAAABAAEAAAAJAAQAAAABAAEAAAACAAQAAAABAAEAAAABAAQAAAABAAEAAAAAAAQAAAABAAEAAAD//wQAAAABAAEAAAD+/wQAAAABAAEAAAD9/wQAAAABAAEAAAAGAAQAAAABAAEAAAAFAAQAAAABAAEAAAAKAAQAAAAAAAEAAAALAAQAAAAAAAEAAAAMAAQAAAAAAAEAAAANAAQAAAACAAEAAAAOAAQAAAADAAEAAAAPAAQAAAADAAEAAAAQAAQAAAADAAEAAAARAAQAAAADAAEAAAASAAQAAAADAAEAAAATAAQAAAADAAEAAAAUAAQAAAADAAEAAAA=")
+tile_map_data = PackedByteArray("AAADAAQAAAACAAEAAAAEAAQAAAABAAEAAAAHAAQAAAAAAAEAAAAIAAQAAAABAAEAAAAJAAQAAAABAAEAAAACAAQAAAABAAEAAAABAAQAAAABAAEAAAAAAAQAAAABAAEAAAD//wQAAAABAAEAAAD+/wQAAAABAAEAAAD9/wQAAAABAAEAAAAGAAQAAAABAAEAAAAFAAQAAAABAAEAAAAKAAQAAAAAAAEAAAALAAQAAAAAAAEAAAAMAAQAAAAAAAEAAAANAAQAAAACAAEAAAAOAAQAAAADAAEAAAAPAAQAAAADAAEAAAAQAAQAAAADAAEAAAARAAQAAAADAAEAAAASAAQAAAADAAEAAAATAAQAAAADAAEAAAAUAAQAAAADAAEAAAD8/wQAAAABAAEAAAD7/wQAAAABAAEAAAD6/wQAAAABAAEAAAD5/wQAAAABAAEAAAD4/wQAAAABAAEAAAD3/wQAAAABAAEAAAD2/wQAAAABAAEAAAD1/wQAAAACAAEAAAD0/wQAAAABAAEAAADz/wQAAAABAAEAAADy/wQAAAABAAEAAADx/wQAAAABAAEAAADw/wQAAAABAAEAAADv/wQAAAABAAEAAADv/wMAAAACAAAAAADv/wIAAAACAAAAAADv/wEAAAACAAAAAADv/wAAAAACAAAAAADv////AAACAAAAAAA=")
 tile_set = SubResource("TileSet_7apt5")
 
 [node name="Objetos" type="TileMapLayer" parent="."]
-tile_map_data = PackedByteArray("AAAGAAQAAAAEAAEAAAAFAAMAAAAEAAEAAAAFAAIAAAAEAAAAAAAGAAMAAAAEAAAAAAAIAAMAAAAEAAMAAAAIAAQAAAAEAAQAAAAJAAMAAAAFAAMAAAAJAAQAAAAFAAQAAAAKAAMAAAAGAAMAAAAKAAQAAAAGAAQAAAASAAMAAAAEAAMAAAASAAQAAAAEAAQAAAATAAMAAAAFAAMAAAATAAQAAAAFAAQAAAAUAAMAAAAGAAMAAAAUAAQAAAAGAAQAAAD//wMAAAAEAAMAABD+/wMAAAAFAAMAABD9/wMAAAAGAAMAABD//wQAAAAEAAQAABD+/wQAAAAFAAQAABD9/wQAAAAGAAQAABA=")
+tile_map_data = PackedByteArray("AAAIAAMAAAAEAAMAAAAIAAQAAAAEAAQAAAAJAAMAAAAFAAMAAAAJAAQAAAAFAAQAAAAKAAMAAAAGAAMAAAAKAAQAAAAGAAQAAAASAAMAAAAEAAMAAAASAAQAAAAEAAQAAAATAAMAAAAFAAMAAAATAAQAAAAFAAQAAAAUAAMAAAAGAAMAAAAUAAQAAAAGAAQAAAA=")
 tile_set = SubResource("TileSet_7apt5")
 
 [node name="ItensPorCima" type="TileMapLayer" parent="."]
@@ -423,3 +426,8 @@ size_flags_vertical = 1
 theme_override_styles/fill = SubResource("StyleBoxFlat_xj4ea")
 value = 50.0
 show_percentage = false
+
+[node name="Inimigo" parent="." instance=ExtResource("72_71wjk")]
+position = Vector2(-358, 71)
+projetil_cena = ExtResource("73_t3p1c")
+tipo_projetil = ExtResource("74_t5h3g")
