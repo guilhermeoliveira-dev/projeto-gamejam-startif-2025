@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://oe12xmax44vv"
+path="res://.godot/imported/Helena (Esse lugar e tao assustador).ogg-51f732710ab330a1bef646af22390bb3.oggvorbisstr"
+
+[deps]
+
+source_file="res://sons/Helena (Esse lugar e tao assustador).ogg"
+dest_files=["res://.godot/imported/Helena (Esse lugar e tao assustador).ogg-51f732710ab330a1bef646af22390bb3.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
