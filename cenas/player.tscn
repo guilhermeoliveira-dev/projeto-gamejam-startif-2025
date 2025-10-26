@@ -1,11 +1,13 @@
-[gd_scene load_steps=10 format=3 uid="uid://qyrqju2tajw1"]
+[gd_scene load_steps=12 format=3 uid="uid://qyrqju2tajw1"]
 
 [ext_resource type="Texture2D" uid="uid://dsc2l6eic3y8y" path="res://sprites/Movimentacoes/prototipoMovimentoGato.png" id="1_8or6t"]
 [ext_resource type="Script" uid="uid://dexkb411viqc7" path="res://scripts/player.gd" id="1_unwft"]
+[ext_resource type="PackedScene" uid="uid://bavxisucyhbks" path="res://cenas/projetil.tscn" id="2_xojfc"]
+[ext_resource type="Resource" uid="uid://xc115sc6cvie" path="res://resources/projeteis/projetil_do_player.tres" id="3_15dsx"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_onrkg"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_unwft"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_4y2i1"]
 atlas = ExtResource("1_8or6t")
 region = Rect2(0, 0, 32, 32)
 
@@ -29,7 +31,7 @@ region = Rect2(96, 32, 32, 32)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_unwft")
+"texture": SubResource("AtlasTexture_4y2i1")
 }],
 "loop": true,
 "name": &"idle",
@@ -53,15 +55,25 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" groups=["player", "recebe_dano"]]
 script = ExtResource("1_unwft")
+projetil_cena = ExtResource("2_xojfc")
+tipo_projetil = ExtResource("3_15dsx")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_onrkg")
 
-[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+[node name="Sprite" type="AnimatedSprite2D" parent="."]
+unique_name_in_owner = true
 sprite_frames = SubResource("SpriteFrames_4y2i1")
-animation = &"idle"
+animation = &"walk"
+frame = 1
+frame_progress = 0.45757943
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(4, 4)
+
+[node name="CooldownProjetil" type="Timer" parent="."]
+unique_name_in_owner = true
+process_callback = 0
+one_shot = true
