@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="projeto-gamejam-startif-2025"
-run/main_scene="uid://c2cbwmfn704cc"
+run/main_scene="uid://dg6avfqo3285l"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="res://icon.svg"
 

@@ -1,9 +1,10 @@
-[gd_scene load_steps=17 format=3 uid="uid://qyrqju2tajw1"]
+[gd_scene load_steps=19 format=3 uid="uid://qyrqju2tajw1"]
 
 [ext_resource type="Texture2D" uid="uid://dsc2l6eic3y8y" path="res://sprites/Movimentacoes/prototipoMovimentoGato.png" id="1_8or6t"]
 [ext_resource type="Script" uid="uid://dexkb411viqc7" path="res://scripts/player.gd" id="1_unwft"]
 [ext_resource type="PackedScene" uid="uid://bavxisucyhbks" path="res://cenas/projetil.tscn" id="2_xojfc"]
 [ext_resource type="Resource" uid="uid://xc115sc6cvie" path="res://resources/projeteis/projetil_do_player.tres" id="3_15dsx"]
+[ext_resource type="Texture2D" uid="uid://r7fs3luhif4s" path="res://sprites/Movimentacoes/gatoLancandoMagia.png" id="5_8v4ht"]
 [ext_resource type="Texture2D" uid="uid://o7iylqwtx4na" path="res://sprites/Movimentacoes/gatoSaltandoEDescendo.png" id="5_15dsx"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_onrkg"]
@@ -13,8 +14,8 @@ atlas = ExtResource("5_15dsx")
 region = Rect2(0, 64, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8bq56"]
-atlas = ExtResource("5_15dsx")
-region = Rect2(32, 64, 32, 32)
+atlas = ExtResource("5_8v4ht")
+region = Rect2(0, 66, 32, 33)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4y2i1"]
 atlas = ExtResource("1_8or6t")
@@ -27,6 +28,10 @@ region = Rect2(0, 32, 32, 32)
 [sub_resource type="AtlasTexture" id="AtlasTexture_rijvs"]
 atlas = ExtResource("5_15dsx")
 region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tckef"]
+atlas = ExtResource("1_8or6t")
+region = Rect2(0, 32, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kthid"]
 atlas = ExtResource("1_8or6t")
@@ -71,6 +76,9 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_rijvs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tckef")
 }],
 "loop": false,
 "name": &"jump",
@@ -110,7 +118,7 @@ shape = SubResource("CapsuleShape2D_onrkg")
 [node name="Sprite" type="AnimatedSprite2D" parent="."]
 unique_name_in_owner = true
 sprite_frames = SubResource("SpriteFrames_4y2i1")
-animation = &"jump"
+animation = &"fall"
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(4, 4)

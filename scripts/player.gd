@@ -94,12 +94,12 @@ func _process(_delta):
 			rodar_animacao("idle")
 			
 		
-	#else:
+	else:
 		## Animacoes no ar (pulando e caindo)
-		#if velocity.y > 0:
-			#rodar_animacao("fall")
-		#elif velocity.y < 0:
-			#rodar_animacao("jump")
+		if velocity.y > 0:
+			rodar_animacao("fall")
+		elif velocity.y < 0:
+			rodar_animacao("jump")
 	
 	sprites.scale.x = ultima_direcao
 	

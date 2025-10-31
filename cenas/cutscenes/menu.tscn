@@ -1,0 +1,73 @@
+[gd_scene load_steps=7 format=3 uid="uid://dg6avfqo3285l"]
+
+[ext_resource type="Script" uid="uid://bo0un6or8p0x3" path="res://cenas/cutscenes/screen.gd" id="1_imgoh"]
+[ext_resource type="Texture2D" uid="uid://bjwjev4eh5kid" path="res://sprites/Movimentacoes/tijolo.png" id="1_jdmv6"]
+[ext_resource type="Texture2D" uid="uid://dopoxsroujnrl" path="res://sprites/backgrounds/bg-ceu.png" id="2_imgoh"]
+[ext_resource type="Texture2D" uid="uid://dlpmy35klnir4" path="res://sprites/abroba.png" id="3_gxqnn"]
+[ext_resource type="Texture2D" uid="uid://duwqmrdv63vaj" path="res://sprites/Cena urbana/lixeiras/lixo.png" id="4_qcy7n"]
+[ext_resource type="Texture2D" uid="uid://is06d73f6n01" path="res://sprites/retratos/retrato_player_placeholder.png" id="6_gxqnn"]
+
+[node name="menu" type="Node2D"]
+script = ExtResource("1_imgoh")
+
+[node name="bg" type="TextureRect" parent="."]
+offset_right = 1281.0
+offset_bottom = 714.0
+texture = ExtResource("1_jdmv6")
+expand_mode = 2
+
+[node name="BgCeu" type="Sprite2D" parent="."]
+position = Vector2(641.24994, 220.5)
+scale = Vector2(3.9921875, 2.4277778)
+texture = ExtResource("2_imgoh")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+offset_left = 160.0
+offset_top = 208.0
+offset_right = 911.0
+offset_bottom = 532.0
+theme_override_constants/margin_left = 400
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_bottom = 20
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="start_btn" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Start"
+
+[node name="quit_btn" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Quit Game"
+
+[node name="mochi" type="TextureRect" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="Abroba" type="Sprite2D" parent="."]
+position = Vector2(828, 465)
+scale = Vector2(7.1562495, 6.90625)
+texture = ExtResource("3_gxqnn")
+
+[node name="Lixo" type="Sprite2D" parent="."]
+position = Vector2(611, 520)
+scale = Vector2(0.3590604, 0.32110912)
+texture = ExtResource("4_qcy7n")
+
+[node name="RetratoPlayerPlaceholder" type="Sprite2D" parent="."]
+position = Vector2(426.00003, 428.99997)
+scale = Vector2(2.9375, 2.71875)
+
+[node name="RetratoPlayerPlaceholder2" type="Sprite2D" parent="."]
+position = Vector2(402, 425.00003)
+scale = Vector2(3.515625, 3.34375)
+texture = ExtResource("6_gxqnn")
+
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/start_btn" to="." method="_on_start_btn_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/quit_btn" to="." method="_on_quit_btn_pressed"]

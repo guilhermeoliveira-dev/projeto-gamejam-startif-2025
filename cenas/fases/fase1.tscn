@@ -427,3 +427,10 @@ shape = SubResource("RectangleShape2D_71wjk")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-479, 126)
 texture = ExtResource("72_71wjk")
+
+[node name="TextEdit" type="TextEdit" parent="."]
+offset_left = -281.0
+offset_top = 161.0
+offset_right = -76.0
+offset_bottom = 229.0
+text = "Clique E para usar Mágia"
